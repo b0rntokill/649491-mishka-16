@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Private  Joker](https://up.htmlacademy.ru/adaptive/16/user/649491).
-* Наставник: `Неизвестно`.
+* Наставник: `Лиза Позднякова`(https://htmlacademy.ru/profile/lizzy).
 
 ---
 
