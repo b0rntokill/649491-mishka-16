@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img class="page-header__image" src="http://placehold.it/86x35" width="86" height="35" alt="Логотип интернет-магазина Мишка">
+      </a>
+      <button class="page-header__toggle" type="button">Открыть меню</button>
+      <nav class="page-header__nav">
+        <div class="page-header__nav-wrapper">
+          <ul class="page-header__nav-list">
+            <li class="page-header__nav-item">
+              <a class="page-header__nav-link" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="page-header__nav-item">
+              <a class="page-header__nav-link" href="form.html">Вязание на заказ</a>
+            </li>
+          </ul>
+          <form class="page-header__search" action="https://echo.htmlacademy.ru" method="post">
+            <label class="page-header__search-label" for="search"><span>Поиск по сайту</span></label>
+            <input class="page-header__search-input" type="search" name="search" id="search" placeholder="Поиск по сайту">
+          </form>
+          <a class="page-header__cart" href="cart.html">Корзина: пока пуста</a>
+        </div>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h1 class="visually-hidden">Форма заказа, интернет магазина игрушек и предметов интерьера ручной работы Мишка</h1>
+      <section class="breadcrumbs">
+        <h2 class="breadcrumbs__caption">Вязание на заказ</h2>
+      </section>
+      <section class="form">
+        <p class="form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+        <form class="form__order" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset class="form__fieldset">
+            <legend class="form__caption">Тип</legend>
+            <!-- Для переключателей атрибут value является обязательным, но он тут несколько не логичен -->
+            <ul class="form__type-list">
+              <li class="form__type-item">
+                <input class="form__radio" type="radio" name="order-type" value="true" id="accessory" checked>
+                <label class="form__radio-label form__radio-label--dots" for="accessory">Аксессуар для интерьера</label>
+              </li>
+              <li class="form__type-item">
+                <input class="form__radio" type="radio" name="order-type" value="false" id="toy">
+                <label class="form__radio-label form__radio-label--dots" for="toy">Детская игрушка</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <legend class="form__caption">Цвет</legend>
+            <ul class="form__color-list">
+              <li class="form__color-item">
+                <input class="form__checkbox" type="checkbox" name="white" id="color-white" checked>
+                <label class="form__checkbox-label form__checkbox-label--check" for="color-white">Белый</label>
+              </li>
+              <li class="form__color-item">
+                <input class="form__checkbox" type="checkbox" name="gray" id="color-gray" checked>
+                <label class="form__checkbox-label form__checkbox-label--check" for="color-gray">Серый</label>
+              </li>
+              <li class="form__color-item">
+                <input class="form__checkbox" type="checkbox" name="tiffany" id="color-tiffany">
+                <label class="form__checkbox-label form__checkbox-label--check" for="color-tiffany">«Тиффани»</label>
+              </li>
+              <li class="form__color-item">
+                <input class="form__checkbox" type="checkbox" name="black" id="color-black">
+                <label class="form__checkbox-label form__checkbox-label--check" for="color-black">Черный</label>
+              </li>
+              <li class="form__color-item">
+                <input class="form__checkbox" type="checkbox" name="pink" id="color-pink">
+                <label class="form__checkbox-label form__checkbox-label--check" for="color-pink">Розовый</label>
+              </li>
+              <li class="form__color-item">
+                <input class="form__checkbox" type="checkbox" name="orange" id="color-orange">
+                <label class="form__checkbox-label form__checkbox-label--check" for="color-orange">Оранжевый</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <legend class="form__caption">ФИО</legend>
+
+          </fieldset>
+        </form>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <a class="page-footer__logo">
+        <img class="page-footer__image" src="http://placehold.it/86x35" width="86" height="35" alt="Логотип интернет-магазина Мишка">
+      </a>
+      <ul class="page-footer__social-list">
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link" href="https://www.instagram.com">
+            <span>Инстаграм</span>
+          </a>
+        </li>
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link" href="https://www.facebook.com">
+            <span>Фейсбук</span>
+          </a>
+        </li>
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link" href="https://twitter.com">
+            <span>Твиттер</span>
+          </a>
+        </li>
+      </ul>
+      <a class="page-footer__copyright" href="#">
+        <p class="page-footer__text">Разработано</p>
+      </a>
+    </footer>
+  </body>
+</html>
