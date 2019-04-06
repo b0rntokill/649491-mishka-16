@@ -11,29 +11,27 @@
       </a>
       <button class="page-header__toggle" type="button">Открыть меню</button>
       <nav class="page-header__nav">
-        <div class="page-header__nav-wrapper">
-          <ul class="page-header__nav-list">
-            <li class="page-header__nav-item">
-              <a class="page-header__nav-link" href="catalog.html">Каталог товаров</a>
-            </li>
-            <li class="page-header__nav-item">
-              <a class="page-header__nav-link" href="form.html">Вязание на заказ</a>
-            </li>
-          </ul>
-          <form class="page-header__search" action="https://echo.htmlacademy.ru" method="post">
-            <label class="page-header__search-label" for="search"><span>Поиск по сайту</span></label>
-            <input class="page-header__search-input" type="search" name="search" id="search" placeholder="Поиск по сайту">
-          </form>
-          <a class="page-header__cart" href="cart.html">Корзина: пока пуста</a>
-        </div>
+        <ul class="page-header__nav-list">
+          <li class="page-header__nav-item">
+            <a class="page-header__nav-link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="page-header__nav-item">
+            <a class="page-header__nav-link" href="form.html">Вязание на заказ</a>
+          </li>
+        </ul>
+        <form class="page-header__search" action="https://echo.htmlacademy.ru" method="post">
+          <label class="page-header__search-label" for="search"><span class="visually-hidden">Поиск по сайту</span></label>
+          <input class="page-header__search-input" type="search" name="search" id="search" placeholder="Поиск по сайту">
+        </form>
+        <a class="page-header__cart" href="cart.html">Корзина: пока пуста</a>
       </nav>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Интернет магазин игрушек и предметов интерьера ручной работы Мишка</h1>
-      <section class="breadcrumbs">
-        <h2 class="breadcrumbs__caption">Милые штуки ручной работы для дома</h2>
-        <a class="breadcrumbs__button" href="form.html">Предметы интерьера</a>
-        <a class="breadcrumbs__button" href="catalog.html">Детские игрушки</a>
+      <section class="page-caption">
+        <h2 class="page-caption__title">Милые штуки ручной работы для дома</h2>
+        <a class="page-caption__button" href="form.html">Предметы интерьера</a>
+        <a class="page-caption__button" href="catalog.html">Детские игрушки</a>
       </section>
       <section class="special-offers">
         <h2 class="special-offers__title title">Вязанные корзинки</h2>
@@ -55,16 +53,14 @@
         </table>
         <figure class="special-offers__image">
           <img class="special-offers__img" src="http://placehold.it/260x315" width="260" height="315" alt="Вязанные корзинки">
-          <figcaption class="special-offers__text">
-            <b class="special-offers__price">Цена: 990 руб.</b>
-          </figcaption>
+          <figcaption class="special-offers__price">Цена: 990 руб.</figcaption>
         </figure>
         <a class="button" href="cart.html">Заказать</a>
       </section>
       <section class="advantages">
         <h2 class="advantages__title">Коротко о нас:</h2>
         <ul class="advantages__list">
-          <li class="advantages__item ">Экологически чистые материалы</li>
+          <li class="advantages__item">Экологически чистые материалы</li>
           <li class="advantages__item">Скандинавский стиль по российской цене</li>
           <li class="advantages__item">Увеличивает лайки на фотографиях</li>
           <li class="advantages__item">Связано вручную с любовью и умилением</li>
@@ -77,35 +73,24 @@
         <blockquote class="feedback__item">
           <p class="feedback__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
           <cite class="feedback__author-name">Анастасия Красильникова</cite>
-          <p class="feedback__author-nickname">@misssssiskras</p>
+          <a class="feedback__author-nickname" href="#">@misssssiskras</a>
         </blockquote>
-        <div class="feedback__nav">
-          <button class="feedback__nav-prev feedback__nav-prev--mobile" type="button">Предыдущий отзыв</button>
-          <button class="feedback__nav-next feedback__nav-prev--mobile" type="button">Следующий отзыв</button>
+        <div class="feedback__button">
+          <button class="feedback__button-prev" type="button">Предыдущий отзыв</button>
+          <button class="feedback__button-next" type="button">Следующий отзыв</button>
         </div>
-        <button class="feedback__write button" type="button">Написать</button>
+        <a class="feedback__write button" href="#">Написать</a>
       </section>
       <section class="contacts">
         <h2 class="contacts__title">Контакты</h2>
         <div class="contacts__info">
-          <table class="contacts__email">
-            <tr>
-              <td class="contacts__feature">e-mail:</td>
-              <td class="contacts__description">info@mimimishkashop.ru</td>
-            </tr>
-          </table>
-          <table class="contacts__addres">
-            <tr>
-              <td class="contacts__feature">адрес:</td>
-              <td class="contacts__description">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
-            </tr>
-          </table>
-        </div>
+          <p class="contacts__feature">e-mail:<span class="contacts__description"><a class="contacts__link" href="#">info@mimimishkashop.ru</a></span></p>
+          <p class="contacts__feature">адрес:<span class="contacts__description">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</span></p>
         <a class="contacts__map" href="https://goo.gl/maps/mxsPxGogZr72">
-          <!-- Тут как видно буlет iframe -->
+          <!-- Тут как видно будет iframe -->
           <img class="contacts__img-map" src="http://placehold.it/260x315" width="320" height="457" alt="Карта с адресом магазина по адресу г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
         </a>
-        <button class="contacts__button button" type="button">Напишите нам</button>
+        <a class="contacts__button button" href="#">Напишите нам</a>
       </section>
     </main>
     <footer class="page-footer">
