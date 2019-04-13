@@ -1,0 +1,72 @@
+.feedback {
+  position: relative;
+  padding: 0 30px 51px;
+
+  &::before {
+    content: url("../img/bg-zigzag-line.svg");
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.feedback__title {
+  margin: 0;
+  @include font-setting(25px, 30px, bold);
+}
+
+.feedback__item {
+  margin: 0 0 30px;
+  padding-top: 22px;
+}
+
+.feedback__text {
+  margin: 0 0 25px;
+  @include font-setting(15px, 30px, regular, $gray-dark);
+}
+
+.feedback__author-name {
+  @include font-setting(17px, 30px, bold);
+  font-style: normal;
+}
+
+.feedback__author-nickname {
+  @include font-setting(17px, 30px, regular);
+}
+
+.feedback__switch {
+  display: flex;
+  margin-bottom: 37px;
+}
+
+.feedback__button {
+  position: relative;
+  display: inline-flex;
+  padding: 0;
+  width: 50%;
+  min-height: 52px;
+  border: 1px solid $gray-light;
+  background-color: transparent;
+
+  &:first-child {
+    border-right: none;
+  }
+}
+
+.feedback__button--prev::after {
+  content: url("../img/icon-left-arrow.svg");
+  position: absolute;
+  top: 11px;
+  left: 37px;
+}
+
+.feedback__button--next::after {
+  content: url("../img/icon-right-arrow.svg");
+  position: absolute;
+  top: 11px;
+  left: 37px;
+}
+
+.feedback__write {
+  @include font-setting(18px, 20px, bold, $gray-dark);
+}
