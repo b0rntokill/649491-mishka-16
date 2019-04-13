@@ -1,0 +1,29 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.product__wrapper {
+  padding: 0 28px 27px;
+  border: 1px solid #ededed;
+}
+
+.product__title {
+  margin: 0 0 5px;
+  padding-top: 26px;
+  @include font-setting(17px, 24px, bold);
+}
+
+.product__description {
+  display: block;
+  margin-bottom: 19px;
+  @include font-setting(13px, 30px, regular, $gray-dark);
+}
+
+.product__price {
+  margin: 0;
+  padding-top: 21px;
+  @include font-setting(15px, 24px, bold);
+  border-top: 1px solid $gray-light;
+}

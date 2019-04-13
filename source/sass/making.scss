@@ -1,0 +1,42 @@
+.making {
+  padding: 0 30px;
+  margin-bottom: 58px;
+}
+
+.making__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 32px;
+  border: 1px solid $gray-light;
+}
+
+.making__title {
+  position: relative;
+  margin: 0 0 25px;
+  padding-left: 90px;
+  @include font-setting(17px, 24px, bold);
+
+  &::before {
+    content: url("../img/icon-video.svg");
+    position: absolute;
+    top: 6px;
+    left: 33px;
+  }
+}
+
+.making__video {
+  margin-bottom: 25px;
+}
+
+.making__text {
+  margin: 0 0 26px;
+  padding: 0 34px;
+  @include font-setting(13px, 24px, regular, $gray-dark);
+}
+
+.making__button {
+  min-width: 192px;
+  @include font-setting(17px, 16px, bold, $gray-dark);
+}
