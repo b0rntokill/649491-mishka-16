@@ -22,7 +22,7 @@
 
 .feedback__text {
   margin: 0 0 25px;
-  @include font-setting(15px, 30px, regular, $gray-dark);
+  @include font-setting(15px, 30px, normal, $gray-dark);
 }
 
 .feedback__author-name {
@@ -31,17 +31,18 @@
 }
 
 .feedback__author-nickname {
-  @include font-setting(17px, 30px, regular);
+  @include font-setting(17px, 30px, normal);
 }
 
-.feedback__switch {
+.feedback__button-wrapper {
   display: flex;
-  margin-bottom: 37px;
+  flex-flow: row wrap;
 }
 
 .feedback__button {
   position: relative;
   display: inline-flex;
+  margin-bottom: 37px;
   padding: 0;
   width: 50%;
   min-height: 52px;
@@ -57,7 +58,7 @@
   content: url("../img/icon-left-arrow.svg");
   position: absolute;
   top: 11px;
-  left: 37px;
+  right: 42px;
 }
 
 .feedback__button--next::after {
@@ -68,5 +69,96 @@
 }
 
 .feedback__write {
+  width: 100%;
   @include font-setting(18px, 20px, bold, $gray-dark);
 }
+@media (min-width: $tablet-width) {
+  .feedback {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+  }
+
+  .feedback__title {
+    margin: 0;
+    padding-right: 280px;
+    width: 100%;
+    @include font-setting(25px, 30px, bold);
+  }
+
+  .feedback__item {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 30px 0;
+    padding-top: 22px;
+  }
+
+  .feedback__text {
+    margin: 0 0 25px;
+    width: 100%;
+    @include font-setting(15px, 30px, normal, $gray-dark);
+  }
+
+  .feedback__author-name {
+    margin-bottom: 20px;
+    padding-right: 280px;
+    width: 100%;
+    @include font-setting(17px, 30px, bold);
+    font-style: normal;
+  }
+
+  .feedback__author-nickname {
+    padding-right: 280px;
+    width: 100%;
+    @include font-setting(17px, 30px, normal);
+  }
+
+  .feedback__button-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    margin-top: -100px;
+    width: 175px;
+    height: auto;
+  }
+
+  .feedback__button {
+    order: 1;
+    position: relative;
+    display: inline-flex;
+    margin-bottom: 0;
+    padding: 0;
+    width: 50%;
+    min-height: 52px;
+    border: none;
+    background-color: transparent;
+
+    &:first-child {
+      border-right: none;
+    }
+  }
+
+  .feedback__button--prev::after {
+    content: url("../img/icon-left-arrow.svg");
+    position: absolute;
+    top: 11px;
+    right: 42px;
+  }
+
+  .feedback__button--next::after {
+    content: url("../img/icon-right-arrow.svg");
+    position: absolute;
+    top: 11px;
+    left: 37px;
+  }
+
+  .feedback__write {
+    position: absolute;
+    top: 0;
+    right: 40px;
+    width: 175px;
+    @include font-setting(18px, 20px, bold, $gray-dark);
+  }
+}
+@media (min-width: $tablet-width) {}

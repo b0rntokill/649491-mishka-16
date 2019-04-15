@@ -33,10 +33,109 @@
 .making__text {
   margin: 0 0 26px;
   padding: 0 34px;
-  @include font-setting(13px, 24px, regular, $gray-dark);
+  @include font-setting(13px, 24px, normal, $gray-dark);
 }
 
 .making__button {
   min-width: 192px;
   @include font-setting(17px, 16px, bold, $gray-dark);
+}
+@media (min-width: $tablet-width) {
+  .making {
+    padding: 0 30px;
+    margin-bottom: 58px;
+  }
+
+  .making__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 32px;
+    border: 1px solid $gray-light;
+  }
+
+  .making__title {
+    position: relative;
+    margin: 0 0 25px;
+    padding-left: 90px;
+    width: 100%;
+    @include font-setting(17px, 24px, bold);
+
+    &::before {
+      content: url("../img/icon-video.svg");
+      position: absolute;
+      top: 6px;
+      left: 33px;
+    }
+  }
+
+  .making__video {
+    order: -1;
+    width: 100%;
+    min-height: 586px;
+    margin-bottom: 25px;
+  }
+
+  .making__text {
+    margin: 0 0 26px;
+    padding: 0 34px;
+    @include font-setting(13px, 24px, normal, $gray-dark);
+  }
+
+  .making__button {
+    min-width: 583px;
+    @include font-setting(17px, 16px, bold, $gray-dark);
+  }
+}
+@media (min-width: $desktop-width) {
+  .making {
+    display: flex;
+    padding: 0 30px;
+    margin-bottom: 58px;
+  }
+
+  .making__wrapper {
+    display: block;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: 1px solid $gray-light;
+  }
+
+  .making__title {
+    float: right;
+    position: relative;
+    margin: 0 0 25px;
+    padding-left: 90px;
+    width: 30%;
+    @include font-setting(17px, 24px, bold);
+
+    &::before {
+      content: url("../img/icon-video.svg");
+      position: absolute;
+      top: 6px;
+      left: 33px;
+    }
+  }
+
+  .making__video {
+    float: left;
+    width: 60%;
+    min-height: 456px;
+    margin-bottom: 0;
+  }
+
+  .making__text {
+    float: right;
+    margin: 0;
+    padding: 0;
+    width: 30%;
+    @include font-setting(13px, 24px, normal, $gray-dark);
+  }
+
+  .making__button {
+    float: right;
+    min-width: 228px;
+    @include font-setting(17px, 16px, bold, $gray-dark);
+  }
 }

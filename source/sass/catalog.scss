@@ -8,8 +8,12 @@
   padding: 0;
   list-style: none;
 }
-@import "product.scss";
 
 .catalog__item:not(:last-child) {
   margin-bottom: 30px;
+}
+@media (min-width: $desktop-width) {
+  .catalog__list {
+    display: flex;
+  }
 }
