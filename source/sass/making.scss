@@ -1,12 +1,16 @@
 .making {
-  padding: 0 30px;
   margin-bottom: 58px;
 }
 
 .making__wrapper {
+  padding: 0 30px;
+}
+
+.making__grid-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   padding-top: 24px;
   padding-bottom: 32px;
   border: 1px solid $gray-light;
@@ -17,6 +21,10 @@
   margin: 0 0 25px;
   padding-left: 90px;
   @include font-setting(17px, 24px, bold);
+
+  & br {
+    display: none;
+  }
 
   &::before {
     content: url("../img/icon-video.svg");
@@ -34,6 +42,10 @@
   margin: 0 0 26px;
   padding: 0 34px;
   @include font-setting(13px, 24px, normal, $gray-dark);
+
+  & br {
+    display: none;
+  }
 }
 
 .making__button {
@@ -42,45 +54,49 @@
 }
 @media (min-width: $tablet-width) {
   .making {
-    padding: 0 30px;
-    margin-bottom: 58px;
+    margin-bottom: 63px;
   }
 
   .making__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 24px;
-    padding-bottom: 32px;
-    border: 1px solid $gray-light;
+    padding: 0 50px;
+  }
+
+  .making__grid-wrapper {
+    padding-top: 0;
+    padding-bottom: 46px;
+    border: none;
+    box-shadow: inset 0 0 0 1px $gray-light;
   }
 
   .making__title {
-    position: relative;
-    margin: 0 0 25px;
-    padding-left: 90px;
+    margin: 0 0 31px;
+    padding-top: 38px;
+    padding-left: 105px;
     width: 100%;
-    @include font-setting(17px, 24px, bold);
+    @include font-setting(20px, 24px, bold);
+    border-top: 1px solid $gray-light;
 
     &::before {
-      content: url("../img/icon-video.svg");
-      position: absolute;
-      top: 6px;
-      left: 33px;
+      top: 33px;
+      left: 42px;
     }
   }
 
   .making__video {
     order: -1;
     width: 100%;
-    min-height: 586px;
-    margin-bottom: 25px;
+    height: 456px;
+    margin-bottom: 0;
   }
 
   .making__text {
-    margin: 0 0 26px;
-    padding: 0 34px;
-    @include font-setting(13px, 24px, normal, $gray-dark);
+    margin: 0 0 35px;
+    padding: 0 40px;
+    @include font-setting(15px, 30px, normal, $gray-dark);
+
+    & br {
+      display: block;
+    }
   }
 
   .making__button {
@@ -90,52 +106,49 @@
 }
 @media (min-width: $desktop-width) {
   .making {
-    display: flex;
-    padding: 0 30px;
-    margin-bottom: 58px;
+    margin-bottom: 106px;
   }
 
-  .making__wrapper {
-    display: block;
-    padding-top: 0;
+  .making__grid-wrapper {
+    flex-wrap: wrap;
+    align-items: flex-start;
     padding-bottom: 0;
-    border: 1px solid $gray-light;
+    height: 455px;
+    box-shadow: inset 0 0 0 1px $gray-light;
   }
 
   .making__title {
-    float: right;
-    position: relative;
-    margin: 0 0 25px;
-    padding-left: 90px;
-    width: 30%;
-    @include font-setting(17px, 24px, bold);
+    margin: 0 0 33px;
+    padding: 96px 70px 0;
+    width: 33.3%;
+    border-top: none;
+
+    & br {
+      display: block;
+    }
 
     &::before {
-      content: url("../img/icon-video.svg");
-      position: absolute;
-      top: 6px;
-      left: 33px;
+      top: 42px;
+      left: 72px;
     }
   }
 
   .making__video {
-    float: left;
-    width: 60%;
-    min-height: 456px;
-    margin-bottom: 0;
+    width: 64.9%;
   }
 
   .making__text {
-    float: right;
-    margin: 0;
-    padding: 0;
-    width: 30%;
-    @include font-setting(13px, 24px, normal, $gray-dark);
+    margin: 0 0 46px;
+    padding: 0 40px 0 70px;
+    width: 33.3%;
+
+    & br {
+      display: none;
+    }
   }
 
   .making__button {
-    float: right;
+    margin-left: 72px;
     min-width: 228px;
-    @include font-setting(17px, 16px, bold, $gray-dark);
   }
 }

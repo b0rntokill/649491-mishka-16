@@ -13,16 +13,17 @@
 .page-footer__social-list {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   margin: 0;
-  padding: 0;
+  padding: 0 59px;
   min-height: 81px;
   border-bottom: 1px solid #e5e5e5;
   list-style: none;
 }
 
 .page-footer__social-item {
-  margin: 25px;
+  // margin: 0 25px;
 }
 
 .page-footer__social-link {
@@ -40,87 +41,57 @@
 }
 
 .page-footer__copyright {
+  position: relative;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  padding-top: 8px;
+  padding: 25px 75px 25px 20px;
   min-height: 80px;
-}
-
-.page-footer__text {
-  position: relative;
-  padding-right: 57px;
   @include font-setting(19px, 18px, bold);
 
   &::after {
     content: url("../img/logo-htmlacademy.svg");
     position: absolute;
-    top: -6px;
-    right: 0;
+    top: 20px;
+    right: 40px;
   }
 }
 @media (min-width: $tablet-width) {
-  .page-footer {
-    background-color: $footer-color;
-  }
-
   .page-footer__wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 0 30px;
+    padding: 51px 50px 0;
+    min-height: 143px;
   }
 
   .page-footer__logo {
     display: block;
+    width: 33.3%;
   }
 
   .page-footer__social-list {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    min-height: 81px;
-    border-bottom: 1px solid #e5e5e5;
-    list-style: none;
-  }
-
-  .page-footer__social-item {
-    margin: 25px;
-  }
-
-  .page-footer__social-link {
-    &--instagram::after {
-      content: url("../img/icon-insta.svg");
-    }
-
-    &--facebook::after {
-      content: url("../img/icon-fb.svg");
-    }
-
-    &--twitter::after {
-      content: url("../img/icon-twitter.svg");
-    }
+    margin-top: -46px;
+    padding: 0 40px;
+    width: 33.3%;
+    border-bottom: none;
   }
 
   .page-footer__copyright {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    padding-top: 8px;
-    min-height: 80px;
-  }
-
-  .page-footer__text {
-    position: relative;
-    padding-right: 57px;
-    @include font-setting(19px, 18px, bold);
+    padding: 12px 57px 12px 37px;
+    width: 33.3%;
 
     &::after {
-      content: url("../img/logo-htmlacademy.svg");
-      position: absolute;
-      top: -6px;
+      top: 7px;
       right: 0;
     }
+  }
+}
+@media (min-width: $desktop-width) {
+  .page-footer__social-list {
+    padding: 0 104px;
+  }
+
+  .page-footer__copyright {
+    padding: 12px 57px 12px 168px;
   }
 }
