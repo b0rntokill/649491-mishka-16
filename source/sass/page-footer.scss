@@ -2,10 +2,6 @@
   background-color: $footer-color;
 }
 
-.page-footer__wrapper {
-  padding: 0 30px;
-}
-
 .page-footer__logo {
   display: none;
 }
@@ -60,7 +56,7 @@
   .page-footer__wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 51px 50px 0;
+    padding-top: 51px;
     min-height: 143px;
   }
 

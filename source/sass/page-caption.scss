@@ -4,7 +4,7 @@
   background-color: $page-caption-color;
 
   &--index {
-    background: url("../img/hero-mobile@1x.jpg") no-repeat 50% -17px;
+    background: $page-caption-color url("../img/hero-mobile@1x.jpg") no-repeat 50% -17px;
   }
 }
 
@@ -12,7 +12,7 @@
 
 .page-caption__title {
   margin: 0;
-  padding: 71px 30px 0;
+  padding: 71px 0 0;
   @include font-setting(27px, 30px, bold);
   text-align: center;
 }
@@ -21,7 +21,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 123px;
+  margin: 123px auto 0;
+  width: 320px;
 }
 
 .page-caption__button {
@@ -91,7 +92,7 @@
     &--index {
       z-index: 1;
       min-height: 735px;
-      background: url("../img/hero-tablet@1x.jpg") no-repeat 50% 0;
+      background: $page-caption-color url("../img/hero-tablet@1x.jpg") no-repeat 50% 0;
     }
 
     &--index .page-caption__title {
@@ -118,7 +119,8 @@
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    margin-top: 373px;
+    margin: 373px auto 0;
+    width: 768px;
     padding: 0 50px;
   }
 
@@ -146,7 +148,7 @@
 
     &--index {
       min-height: 746px;
-      background: url("../img/hero-desktop@1x.jpg") no-repeat 50% 0;
+      background: $page-caption-color url("../img/hero-desktop@1x.jpg") no-repeat 50% 0;
     }
   }
 
@@ -156,7 +158,9 @@
   }
 
   .page-caption__button-wrapper {
-    margin-top: 358px;
+    margin: 358px auto 0;
+    width: 1150px;
+    padding: 0 50px;
   }
 
   .page-caption__button {
