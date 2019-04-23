@@ -1,12 +1,12 @@
 .making {
-  padding: 0 30px;
   margin-bottom: 58px;
 }
 
-.making__wrapper {
+.making__grid-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   padding-top: 24px;
   padding-bottom: 32px;
   border: 1px solid $gray-light;
@@ -17,6 +17,10 @@
   margin: 0 0 25px;
   padding-left: 90px;
   @include font-setting(17px, 24px, bold);
+
+  & br {
+    display: none;
+  }
 
   &::before {
     content: url("../img/icon-video.svg");
@@ -33,10 +37,110 @@
 .making__text {
   margin: 0 0 26px;
   padding: 0 34px;
-  @include font-setting(13px, 24px, regular, $gray-dark);
+  @include font-setting(13px, 24px, normal, $gray-dark);
+
+  & br {
+    display: none;
+  }
 }
 
 .making__button {
   min-width: 192px;
   @include font-setting(17px, 16px, bold, $gray-dark);
+}
+@media (min-width: $tablet-width) {
+  .making {
+    margin-bottom: 63px;
+  }
+
+  .making__grid-wrapper {
+    padding-top: 0;
+    padding-bottom: 46px;
+    border: none;
+    box-shadow: inset 0 0 0 1px $gray-light;
+  }
+
+  .making__title {
+    margin: 0 0 31px;
+    padding-top: 38px;
+    padding-left: 105px;
+    width: 100%;
+    @include font-setting(20px, 24px, bold);
+    border-top: 1px solid $gray-light;
+
+    &::before {
+      top: 33px;
+      left: 42px;
+    }
+  }
+
+  .making__video {
+    order: -1;
+    width: 100%;
+    height: 456px;
+    margin-bottom: 0;
+  }
+
+  .making__text {
+    margin: 0 0 35px;
+    padding: 0 40px;
+    @include font-setting(15px, 30px, normal, $gray-dark);
+
+    & br {
+      display: block;
+    }
+  }
+
+  .making__button {
+    min-width: 583px;
+    @include font-setting(17px, 16px, bold, $gray-dark);
+  }
+}
+@media (min-width: $desktop-width) {
+  .making {
+    margin-bottom: 106px;
+  }
+
+  .making__grid-wrapper {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-bottom: 0;
+    height: 455px;
+    box-shadow: inset 0 0 0 1px $gray-light;
+  }
+
+  .making__title {
+    margin: 0 0 33px;
+    padding: 96px 70px 0;
+    width: 33.3%;
+    border-top: none;
+
+    & br {
+      display: block;
+    }
+
+    &::before {
+      top: 42px;
+      left: 72px;
+    }
+  }
+
+  .making__video {
+    width: 64.9%;
+  }
+
+  .making__text {
+    margin: 0 0 46px;
+    padding: 0 40px 0 70px;
+    width: 33.3%;
+
+    & br {
+      display: none;
+    }
+  }
+
+  .making__button {
+    margin-left: 72px;
+    min-width: 228px;
+  }
 }

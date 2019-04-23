@@ -1,6 +1,5 @@
 .special-offers {
-  padding: 27px 30px 0;
-  margin-bottom: 28px;
+  margin-bottom: 27px;
 }
 
 .special-offers__title {
@@ -15,40 +14,188 @@
   text-transform: uppercase;
 }
 
+.special-offers__subtitle br {
+  display: none;
+}
+
 .special-offers__text {
   margin: 0 0 16px;
-  @include font-setting(15px, 24px, regular, $gray-dark);
+  @include font-setting(15px, 24px, normal, $gray-dark);
 }
 
 .special-offers__details-table {
   margin-bottom: 27px;
   width: 100%;
-  @include font-setting(15px, 24px, regular, $gray-dark);
+  @include font-setting(15px, 24px, normal, $gray-dark);
   border-collapse: collapse;
 }
 
 .special-offers__description,
 .special-offers__feature {
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding: 8px 0;
   border-bottom: 1px solid $gray-light;
 
   &:not(:last-child) {
-    padding-right: 15px;
+    padding-right: 14px;
   }
 }
 
-.special-offers__image {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 0 25px;
-}
-
 .special-offers__img {
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 }
 
 .special-offers__price {
+  display: block;
+  padding-left: 67px;
+  margin-bottom: 25px;
   @include font-setting(17px, 24px, bold, $gray-dark);
+}
+
+.special-offers__button {
+  min-width: 260px;
+}
+@media (min-width: $tablet-width) {
+  .special-offers {
+    margin-bottom: 35px;
+  }
+
+  .special-offers__title-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 49px;
+    padding: 0;
+    width: auto;
+  }
+
+  .special-offers__title {
+    margin: 0 0 0 -3px;
+    @include font-setting(43px, 50px, bold);
+  }
+
+  .special-offers__subtitle {
+    margin: 5px 22px 0 0;
+    min-width: 80px;
+    text-align: center;
+    @include font-setting(17px, 17px, bold, $tiffany);
+  }
+
+  .special-offers__subtitle br {
+    display: block;
+  }
+
+  .special-offers__text-wrapper {
+    float: left;
+    margin-bottom: 32px;
+    padding: 0;
+    width: 50%;
+  }
+
+  .special-offers__text {
+    margin: 0 0 36px;
+    @include font-setting(17px, 30px, normal, $gray-dark);
+  }
+
+  .special-offers__details-table {
+    width: 100%;
+    @include font-setting(15px, 20px, normal, $gray-dark);
+  }
+
+  .special-offers__description,
+  .special-offers__feature {
+    padding: 9px 0;
+
+    &:not(:last-child) {
+      width: 29%;
+      padding-right: 0;
+    }
+  }
+
+  .special-offers__img {
+    float: right;
+    margin: 7px 0 0;
+    width: 50%;
+    min-height: 405px;
+  }
+
+  .special-offers__price-wrapper {
+    float: left;
+    margin-left: -2px;
+    padding: 0;
+  }
+
+  .special-offers__price {
+    padding-left: 73px;
+    margin-bottom: 35px;
+    @include font-setting(20px, 24px, bold, $gray-dark);
+  }
+
+  .special-offers__button {
+    min-width: 292px;
+  }
+}
+@media (min-width: $desktop-width) {
+  .special-offers {
+    margin-bottom: 73px;
+  }
+
+  .special-offers__title-wrapper {
+    justify-content: flex-start;
+    padding-top: 66px;
+  }
+
+  .special-offers__title {
+    order: 1;
+    margin: 0;
+    @include font-setting(53px, 57px, bold);
+  }
+
+  .special-offers__subtitle {
+    margin: 9px 49px 0 43px;
+    min-width: 80px;
+    text-align: center;
+    @include font-setting(17px, 17px, bold, $tiffany);
+  }
+
+  .special-offers__text-wrapper {
+    margin-left: 175px;
+    margin-bottom: 79px;
+    width: 28%;
+  }
+
+  .special-offers__text {
+    margin: 0 0 48px;
+    @include font-setting(17px, 30px, normal, $gray-dark);
+  }
+
+  .special-offers__details-table {
+    width: 100%;
+    @include font-setting(15px, 20px, normal, $gray-dark);
+  }
+
+  .special-offers__description,
+  .special-offers__feature {
+    padding: 10px 0;
+
+    &:not(:last-child) {
+      width: 34%;
+    }
+  }
+
+  .special-offers__img {
+    float: right;
+    margin: -158px 0 0;
+    width: 50%;
+    min-height: 636px;
+  }
+
+  .special-offers__price-wrapper {
+    float: left;
+    margin: 0 0 0 175px;
+  }
+
+  .special-offers__price {
+    @include font-setting(20px, 24px, bold, $gray-dark);
+  }
 }
