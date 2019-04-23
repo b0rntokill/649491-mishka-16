@@ -2,10 +2,6 @@
   margin-bottom: 58px;
 }
 
-.making__wrapper {
-  padding: 0 30px;
-}
-
 .making__grid-wrapper {
   display: flex;
   flex-direction: column;
@@ -55,10 +51,6 @@
 @media (min-width: $tablet-width) {
   .making {
     margin-bottom: 63px;
-  }
-
-  .making__wrapper {
-    padding: 0 50px;
   }
 
   .making__grid-wrapper {
