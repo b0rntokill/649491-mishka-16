@@ -63,14 +63,14 @@
   content: url("../img/icon-left-arrow.svg");
   position: absolute;
   top: 11px;
-  right: 42px;
+  right: calc(50% - 26px);
 }
 
 .feedback__button--next::after {
   content: url("../img/icon-right-arrow.svg");
   position: absolute;
   top: 11px;
-  left: 37px;
+  left: calc(50% - 26px);
 }
 
 .feedback__write {
@@ -112,6 +112,7 @@
     display: flex;
     flex-flow: row wrap;
     margin: 0;
+    width: 100%;
   }
 
   .feedback__text {

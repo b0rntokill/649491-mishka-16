@@ -2,7 +2,10 @@
   margin-bottom: 40px;
 }
 
-.contacts__wrapper {}
+.contacts__wrapper {
+  display: flex;
+  justify-content: center;
+}
 
 .contacts__info {
   margin-bottom: 37px;
@@ -71,8 +74,8 @@
   }
 
   .contacts__wrapper {
-    display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     padding-top: 43px;
   }
 

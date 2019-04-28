@@ -1,9 +1,12 @@
 .page-caption {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 27px;
   min-height: 177px;
   background-color: $page-caption-color;
 
   &--index {
+    min-height: 489px;
     background: $page-caption-color url("../img/hero-mobile@1x.jpg") no-repeat 50% -17px;
   }
 }
@@ -21,7 +24,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 123px auto 0;
+  margin: auto auto 0;
   width: 320px;
 }
 
@@ -33,11 +36,10 @@
   min-height: 103px;
   @include font-setting(19px, 24px, bold, $white);
   background-color: $tiffany;
-
+  // overflow: hidden;
   &:focus,
   &:hover {
     outline: none;
-    min-height: 108px;
     padding-top: 20px;
     background-color: $tiffany-lighter;
   }
@@ -101,8 +103,6 @@
   }
 
   .page-caption__wrapper {
-    display: flex;
-    flex-flow: row wrap;
     padding-top: 58px;
   }
 
@@ -117,8 +117,7 @@
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    margin: 373px auto 0;
-    width: 768px;
+    width: $tablet-width;
     padding: 0 50px;
   }
 
@@ -156,8 +155,8 @@
   }
 
   .page-caption__button-wrapper {
-    margin: 358px auto 0;
     width: 1150px;
+    margin-bottom: 19px;
     padding: 0 50px;
   }
 

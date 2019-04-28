@@ -9,7 +9,7 @@
 }
 
 .page-header__logo {
-  padding-left: 33.1%;
+  margin-left: calc(50% - 43px);
 }
 
 .page-header__toggle {
@@ -29,7 +29,7 @@
 
 .page-header__nav-link {
   display: block;
-  padding: 28px 30px 26px 76px;
+  padding: 28px 9.37% 26px 23.75%;
   @include font-setting(17px, 24px, bold);
   border-top: 1px solid $header-menu-border;
 
@@ -53,7 +53,7 @@
 
 .page-header__user-link {
   display: block;
-  padding: 28px 30px 26px 76px;
+  padding: 28px 9.37% 26px 23.75%;
   @include font-setting(17px, 24px, bold);
   border-top: 1px solid $header-menu-border;
 
@@ -162,8 +162,8 @@
   }
 
   .page-header__logo {
+    margin-left: 0;
     height: 46px;
-    padding: 0;
   }
 
   .page-header__toggle {
@@ -174,7 +174,7 @@
     position: relative;
     display: flex;
     flex-flow: row wrap;
-    flex-basis: 384px;
+    flex-basis: 57.48%;
     order: 1;
     background-color: transparent;
 
@@ -239,6 +239,8 @@
     display: block;
     order: 1;
     padding: 16px 0;
+    flex-basis: 42.52%;
+    text-align: right;
     @include font-setting(15px, 24px, normal, $gray-dark);
 
     &::after {
@@ -256,7 +258,6 @@
   .page-header__logo-wrapper {
     justify-content: center;
     order: 1;
-    padding: 0;
     flex-basis: 26.3%;
   }
 
@@ -293,7 +294,7 @@
   .page-header__additional-list {
     display: flex;
     flex-flow: row wrap;
-    flex-basis: 65.2%;
+    flex-basis: 57.48%;
     order: 1;
   }
 

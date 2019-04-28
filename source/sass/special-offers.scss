@@ -1,5 +1,10 @@
 .special-offers {
-  margin-bottom: 27px;
+  margin-bottom: 28px;
+}
+
+.special-offers__wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .special-offers__title {
@@ -41,7 +46,13 @@
 }
 
 .special-offers__img {
-  margin-bottom: 22px;
+  margin-bottom: 24px;
+  width: 100%;
+  height: auto;
+}
+
+.special-offers__price-wrapper {
+  align-self: center;
 }
 
 .special-offers__price {
@@ -59,6 +70,10 @@
     margin-bottom: 35px;
   }
 
+  .special-offers__wrapper {
+    display: block;
+  }
+
   .special-offers__title-wrapper {
     display: flex;
     flex-flow: row wrap;
@@ -66,7 +81,7 @@
     align-items: center;
     margin-bottom: 49px;
     padding: 0;
-    width: auto;
+    width: 100%;
   }
 
   .special-offers__title {
@@ -87,13 +102,14 @@
 
   .special-offers__text-wrapper {
     float: left;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
     padding: 0;
-    width: 50%;
+    width: 43.56%;
   }
 
   .special-offers__text {
-    margin: 0 0 36px;
+    margin: 0 0 34px;
+    width: 100%;
     @include font-setting(17px, 30px, normal, $gray-dark);
   }
 
@@ -104,10 +120,10 @@
 
   .special-offers__description,
   .special-offers__feature {
-    padding: 9px 0;
+    padding: 10px 0;
 
     &:not(:last-child) {
-      width: 29%;
+      width: 33%;
       padding-right: 0;
     }
   }
@@ -116,7 +132,6 @@
     float: right;
     margin: 7px 0 0;
     width: 50%;
-    min-height: 405px;
   }
 
   .special-offers__price-wrapper {
@@ -153,31 +168,20 @@
 
   .special-offers__subtitle {
     margin: 9px 49px 0 43px;
-    min-width: 80px;
-    text-align: center;
-    @include font-setting(17px, 17px, bold, $tiffany);
   }
 
   .special-offers__text-wrapper {
     margin-left: 175px;
-    margin-bottom: 79px;
+    margin-bottom: 81px;
     width: 28%;
   }
 
   .special-offers__text {
-    margin: 0 0 48px;
-    @include font-setting(17px, 30px, normal, $gray-dark);
-  }
-
-  .special-offers__details-table {
-    width: 100%;
-    @include font-setting(15px, 20px, normal, $gray-dark);
+    margin: 0 0 46px;
   }
 
   .special-offers__description,
   .special-offers__feature {
-    padding: 10px 0;
-
     &:not(:last-child) {
       width: 34%;
     }
@@ -186,16 +190,10 @@
   .special-offers__img {
     float: right;
     margin: -158px 0 0;
-    width: 50%;
-    min-height: 636px;
+    height: auto;
   }
 
   .special-offers__price-wrapper {
-    float: left;
     margin: 0 0 0 175px;
-  }
-
-  .special-offers__price {
-    @include font-setting(20px, 24px, bold, $gray-dark);
   }
 }
