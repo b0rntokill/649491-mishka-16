@@ -15,7 +15,7 @@
 
 .page-caption__title {
   margin: 0;
-  padding: 71px 0 0;
+  padding: 73px 0 0;
   @include font-setting(27px, 30px, bold);
   text-align: center;
 }
@@ -25,7 +25,9 @@
   flex-direction: column;
   align-items: center;
   margin: auto auto 0;
-  width: 320px;
+  width: 100%;
+  background-color: $tiffany;
+  overflow: hidden;
 }
 
 .page-caption__button {
@@ -33,15 +35,18 @@
   display: block;
   padding: 25px 50% 25px 30px;
   width: 100%;
-  min-height: 103px;
+  min-height: 108px;
   @include font-setting(19px, 24px, bold, $white);
   background-color: $tiffany;
-  // overflow: hidden;
+  transform: translateY(5px);
+  transition: all 0.5s;
+
   &:focus,
   &:hover {
     outline: none;
-    padding-top: 20px;
     background-color: $tiffany-lighter;
+    transform: translateY(0);
+    transition: all 0.5s;
   }
 
   &:active {
@@ -55,6 +60,10 @@
   &--dark:focus,
   &--dark:hover {
     background-color: $tiffany-darker;
+  }
+
+  &--icon-interior {
+    min-height: 103px;
   }
 
   &--icon-interior,
@@ -119,12 +128,13 @@
     align-items: center;
     width: $tablet-width;
     padding: 0 50px;
+    background: none;
   }
 
   .page-caption__button {
     padding: 28px 25% 0 36px;
     width: 50%;
-    min-height: 108px;
+    min-height: 113px;
     @include font-setting(20px, 30px, bold, $white);
 
     &--icon-interior::after {
@@ -140,11 +150,11 @@
 }
 @media (min-width: $desktop-width) {
   .page-caption {
-    margin-bottom: 56px;
+    margin-bottom: 58px;
     min-height: 237px;
 
     &--index {
-      min-height: 746px;
+      min-height: 744px;
       background: $page-caption-color url("../img/hero-desktop@1x.jpg") no-repeat 50% 0;
     }
   }
@@ -156,13 +166,12 @@
 
   .page-caption__button-wrapper {
     width: 1150px;
-    margin-bottom: 19px;
     padding: 0 50px;
   }
 
   .page-caption__button {
     padding-right: 35%;
-    min-height: 102px;
+    min-height: 122px;
     @include font-setting(20px, 30px, bold, $white);
 
     &--icon-interior::after {

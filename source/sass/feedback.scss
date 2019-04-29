@@ -57,6 +57,16 @@
   &:first-child {
     border-right: none;
   }
+
+  &:focus,
+  &:hover {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .feedback__button--prev::after {

@@ -4,6 +4,11 @@
   width: 100%;
 }
 
+.product__img {
+  width: 100%;
+  height: auto;
+}
+
 .product__wrapper {
   position: relative;
   padding: 0 28px 27px;
@@ -104,6 +109,15 @@
     min-height: 196px;
     padding: 0 25px 26px;
     border: 1px solid #ededed;
+
+    &:focus,
+    &:hover {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    }
   }
 
   .product__title {

@@ -25,13 +25,15 @@
   &::before {
     content: url("../img/icon-video.svg");
     position: absolute;
-    top: 6px;
+    top: 4px;
     left: 33px;
   }
 }
 
 .making__video {
   margin-bottom: 25px;
+  width: 100%;
+  height: auto;
 }
 
 .making__text {
@@ -84,10 +86,14 @@
   .making__text {
     margin: 0 0 35px;
     padding: 0 40px;
+    width: 100%;
     @include font-setting(15px, 30px, normal, $gray-dark);
 
     & br {
       display: block;
+      @media (min-width: 800px) {
+        display: none;
+      }
     }
   }
 
@@ -114,10 +120,6 @@
     padding: 96px 70px 0;
     width: 33.3%;
     border-top: none;
-
-    & br {
-      display: block;
-    }
 
     &::before {
       top: 42px;

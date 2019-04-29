@@ -86,9 +86,6 @@
 }
 @media (min-width: $tablet-width) {
   .advantages__wrapper {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: flex-start;
     padding-top: 82px;
 
     &::before {
@@ -105,17 +102,32 @@
   }
 
   .advantages__list {
-    width: 50%;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
   }
 
   .advantages__item {
     margin-bottom: 57px;
     padding-top: 54px;
+    width: 50%;
     @include font-setting(20px, 22px, bold);
+  }
 
-    & br {
-      display: none;
-    }
+  .advantages__item--icon-money {
+    order: 1;
+  }
+
+  .advantages__item--icon-rocket {
+    order: 1;
+  }
+
+  .advantages__item--icon-heart {
+    order: 2;
+  }
+
+  .advantages__item--icon-gift {
+    order: 2;
   }
 }
 @media (min-width: $desktop-width) {

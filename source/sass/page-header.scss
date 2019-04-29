@@ -306,5 +306,15 @@
     display: block;
     padding: 17px 0;
     @include font-setting(15px, 24px, bold);
+
+    &:focus,
+    &:hover {
+      outline: none;
+      color: $black-opacity-60;
+    }
+
+    &:active {
+      color: $black-opacity-30;
+    }
   }
 }

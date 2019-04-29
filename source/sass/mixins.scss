@@ -2,11 +2,9 @@
   margin: 0 auto;
   @media (min-width: $mobile-width) {
     padding: 0 30px;
-    // width: 320px;
   }
   @media (min-width: $tablet-width) {
     padding: 0 50px;
-    // width: 768px;
     max-width: 1150px;
   }
   @media (min-width: $desktop-width) {
