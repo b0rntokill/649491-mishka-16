@@ -60,4 +60,15 @@ a {
   text-transform: uppercase;
   border: 2px solid $button-border;
   cursor: pointer;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    color: $white;
+    background-color: $button-background;
+  }
+
+  &:active {
+    color: $white-opacity-30;
+  }
 }
