@@ -57,9 +57,17 @@
         <ul class="catalog__list">
           <li class="catalog__item">
             <article class="product">
-              <img class="product__img" src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Вязанный зайчик">
+              <a class="product__link-image" href="#">
+                <picture class="product__image">
+                  <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
+                  <img class="product__img" src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" alt="Вязанный зайчик">
+                </picture>
+              </a>
               <div class="product__wrapper">
-                <h3 class="product__title">Зайчик-попрыгайчик</h3>
+                <a class="product__link-title" href="#">
+                  <h3 class="product__title">Зайчик-попрыгайчик</h3>
+                </a>
                 <span class="product__description">Рост 30 см, вес 200 г</span>
                 <p class="product__price">1 200 руб.</p>
                 <a class="product__cart" href="#"></a>
@@ -68,9 +76,17 @@
           </li>
           <li class="catalog__item">
             <article class="product">
-              <img class="product__img" src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Вязанная корзинка для белья">
+              <a class="product__link-image" href="#">
+                <picture class="product__image">
+                  <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
+                  <img class="product__img" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" alt="Вязанная корзинка для белья">
+                </picture>
+              </a>
               <div class="product__wrapper">
-                <h3 class="product__title">Корзинка для белья</h3>
+                <a class="product__link-title" href="#">
+                  <h3 class="product__title">Корзинка для белья</h3>
+                </a>
                 <span class="product__description">Диаметр 15 см, высота 10 см</span>
                 <p class="product__price">690 руб.</p>
                 <a class="product__cart" href="#"></a>
@@ -79,9 +95,17 @@
           </li>
           <li class="catalog__item">
             <article class="product">
-              <img class="product__img" src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="Вязанная большая корзинка для игрушек">
+              <a class="product__link-image" href="#">
+                <picture class="product__image">
+                  <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
+                  <img class="product__img" src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x" alt="Вязанная большая корзинка для игрушек">
+                </picture>
+              </a>
               <div class="product__wrapper">
-                <h3 class="product__title">Большая корзинка <br> для&nbsp;игрушек</h3>
+                <a class="product__link-title" href="#">
+                  <h3 class="product__title">Большая корзинка <br> для&nbsp;игрушек</h3>
+                </a>
                 <span class="product__description">Диаметр 30 см, высота 30 см</span>
                 <p class="product__price">1 500 руб.</p>
                 <a class="product__cart" href="#"></a>
@@ -95,7 +119,11 @@
       <div class="making__wrapper container">
         <div class="making__grid-wrapper">
           <h2 class="making__title">Процесс <br> производства</h2>
-          <img class="making__video" src="img/video-mobile@1x.jpg" width="260" height="150"></img>
+          <picture class="making__video-frame">
+            <source media="(min-width:1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+            <img class="making__video" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Видео о процессе создании наших продуктов"></img>
+          </picture>
           <p class="making__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео <br> о том, как появляются наши товары.</p>
           <a class="making__button button" href="cart.html">Сделать заказ</a>
         </div>

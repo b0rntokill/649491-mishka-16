@@ -99,11 +99,19 @@
     padding-bottom: 124px;
 
     &::after {
-      content: url("../img/review@1x.jpg");
+      content: "";
       position: absolute;
+      width: 350px;
+      height: 457px;
       top: 0;
       left: 0;
       z-index: -1;
+      background-image: url("../img/review@1x.jpg");
+      background-repeat: no-repeat;
+      background-size: 350px 457px;
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/review@2x.jpg");
+      }
     }
 
     &::before {

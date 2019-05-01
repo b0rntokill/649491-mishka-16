@@ -30,8 +30,27 @@
   }
 }
 
+.making__video-frame {
+  margin-bottom: 23px;
+  width: 100%;
+  position: relative;
+
+  &::after {
+    content: url("../img/icon-play.svg");
+    position: absolute;
+    top: calc(50% - 38px);
+    left: calc(50% - 51px);
+    min-width: 102px;
+    min-height: 77px;
+  }
+
+  &:hover &::after {
+    transition: all 0.5s;
+    transform: scale(1.2);
+  }
+}
+
 .making__video {
-  margin-bottom: 25px;
   width: 100%;
   height: auto;
 }
@@ -76,11 +95,14 @@
     }
   }
 
-  .making__video {
+  .making__video-frame {
     order: -1;
-    width: 100%;
-    height: 456px;
-    margin-bottom: 0;
+    margin: 0;
+  }
+
+  .making__video {
+    display: flex;
+    margin: 0;
   }
 
   .making__text {
@@ -127,7 +149,7 @@
     }
   }
 
-  .making__video {
+  .making__video-frame {
     width: 64.9%;
   }
 
