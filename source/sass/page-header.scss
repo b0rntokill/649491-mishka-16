@@ -22,6 +22,7 @@
 }
 
 .page-header__nav-list {
+  display: none;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -45,6 +46,7 @@
 }
 
 .page-header__user-list {
+  display: none;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -139,6 +141,14 @@
 
   .page-header__nav--nojs .page-header__toggle {
     display: none;
+  }
+
+  .page-header__nav--nojs .page-header__nav-list {
+    display: block;
+  }
+
+  .page-header__nav--nojs .page-header__user-list {
+    display: block;
   }
 }
 @media (min-width: $tablet-width) {
