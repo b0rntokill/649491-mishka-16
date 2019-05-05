@@ -1,10 +1,24 @@
 .contacts {
+  position: relative;
   margin-bottom: 40px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-size: contain;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    display: block;
+  }
 }
 
 .contacts__wrapper {
   display: flex;
   justify-content: center;
+  padding-top: 42px;
 }
 
 .contacts__info {
@@ -14,6 +28,10 @@
 .contacts__title {
   margin: 0 0 25px;
   @include font-setting(18px, 30px, bold);
+}
+
+.contacts__title-icon {
+  display: none;
 }
 
 .contacts__adress-wrapper,
@@ -114,12 +132,16 @@
 @media (min-width: $tablet-width) {
   .contacts {
     margin-bottom: 57px;
+
+    &::before {
+      height: 15px;
+    }
   }
 
   .contacts__wrapper {
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 43px;
+    padding-top: 76px;
   }
 
   .contacts__info {
@@ -135,13 +157,13 @@
     width: 100%;
     margin: 0 0 49px;
     @include font-setting(43px, 50px, bold);
+  }
 
-    &::after {
-      content: url("../img/icon-flag.svg");
-      position: absolute;
-      top: -15px;
-      right: 3px;
-    }
+  .contacts__title-icon {
+    display: block;
+    position: absolute;
+    top: -15px;
+    right: 3px;
   }
 
   .contacts__adress-wrapper,
@@ -198,14 +220,31 @@
 @media (min-width: $desktop-width) {
   .contacts {
     margin-bottom: 105px;
+
+    &::before {
+      display: none;
+    }
   }
 
   .contacts__map-wrapper {
+    position: relative;
     display: flex;
     flex-flow: row wrap;
     margin: 0 auto;
     width: $desktop-width;
-    padding: 43px 50px 0;
+    padding: 91px 50px 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../img/bg-zigzag-line.svg");
+      background-size: contain;
+      top: 0;
+      left: 50px;
+      width: 1050px;
+      height: 21px;
+      display: block;
+    }
   }
 
   .contacts__wrapper {
@@ -226,11 +265,11 @@
   .contacts__title {
     margin: 0 0 49px -4px;
     @include font-setting(53px, 57px, bold);
+  }
 
-    &::after {
-      top: -9px;
-      left: -108px;
-    }
+  .contacts__title-icon {
+    top: -8px;
+    left: -108px;
   }
 
   .contacts__adress-wrapper,
