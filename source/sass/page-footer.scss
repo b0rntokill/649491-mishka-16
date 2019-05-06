@@ -22,16 +22,16 @@
 }
 
 .page-footer__social-link {
-  &--instagram::after {
-    content: url("../img/icon-insta.svg");
+  fill: #221f1f;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    fill: $tiffany-darker;
   }
 
-  &--facebook::after {
-    content: url("../img/icon-fb.svg");
-  }
-
-  &--twitter::after {
-    content: url("../img/icon-twitter.svg");
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -40,17 +40,34 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  padding: 27px 75px 27px 20px;
+  padding-top: 27px;
   min-height: 81px;
   @include font-setting(19px, 18px, bold);
   border-top: 1px solid #e5e5e5;
 
-  &::after {
-    content: url("../img/logo-htmlacademy.svg");
-    position: absolute;
-    top: 20px;
-    right: calc(15.38%);
+  &:focus,
+  &:hover {
+    outline: none;
   }
+
+  &:focus .page-footer__copyright-icon,
+  &:hover .page-footer__copyright-icon {
+    fill: $tiffany-darker;
+  }
+
+  &:active {
+    color: $black-opacity-30;
+  }
+
+  &:active .page-footer__copyright-icon {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__copyright-icon {
+  margin-top: -6px;
+  margin-left: 29px;
+  fill: $tiffany;
 }
 @media (min-width: $tablet-width) {
   .page-footer__wrapper {
@@ -62,7 +79,19 @@
 
   .page-footer__logo {
     display: block;
-    width: 33.3%;
+    margin-right: 10%;
+    width: 110px;
+    fill: $black;
+
+    &:focus,
+    &:hover {
+      outline: none;
+      fill: $tiffany-darker;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .page-footer__social-list {
@@ -70,18 +99,14 @@
   }
 
   .page-footer__copyright {
-    padding: 12px 57px 12px 37px;
-    width: 33.3%;
+    padding-top: 12px;
+    justify-content: flex-end;
+    width: 185px;
     border-top: none;
-
-    &::after {
-      top: 7px;
-      right: 0;
-    }
   }
 }
 @media (min-width: $desktop-width) {
   .page-footer__copyright {
-    padding: 12px 57px 12px 168px;
+    width: 215px;
   }
 }

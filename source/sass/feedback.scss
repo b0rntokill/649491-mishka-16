@@ -1,18 +1,9 @@
 .feedback {
-  margin-bottom: 33px;
+  margin-bottom: 44px;
 }
 
 .feedback__wrapper {
   position: relative;
-  padding-bottom: 53px;
-
-  &::before {
-    display: none;
-    content: url("../img/bg-zigzag-line.svg");
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
 }
 
 .feedback__title {
@@ -53,6 +44,7 @@
   border: 1px solid $gray-light;
   background-color: transparent;
   cursor: pointer;
+  fill: $black;
 
   &:first-child {
     border-right: none;
@@ -69,18 +61,17 @@
   }
 }
 
-.feedback__button--prev::after {
-  content: url("../img/icon-left-arrow.svg");
+.feedback__button-prev {
   position: absolute;
   top: 11px;
-  right: calc(50% - 26px);
+  right: calc(50% - 23px);
 }
 
-.feedback__button--next::after {
-  content: url("../img/icon-right-arrow.svg");
+.feedback__button-next {
   position: absolute;
   top: 11px;
   left: calc(50% - 26px);
+  transform: rotate(180deg);
 }
 
 .feedback__write {
@@ -89,26 +80,29 @@
 }
 @media (min-width: $tablet-width) {
   .feedback {
-    margin-bottom: 25px;
+    margin-bottom: 66px;
   }
 
   .feedback__wrapper {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
-    padding-bottom: 124px;
+    padding-bottom: 50px;
 
     &::after {
-      content: url("../img/review@1x.jpg");
+      content: "";
       position: absolute;
+      width: 350px;
+      height: 457px;
       top: 0;
       left: 0;
       z-index: -1;
-    }
-
-    &::before {
-      bottom: 0;
-      left: 0;
+      background-image: url("../img/review@1x.jpg");
+      background-repeat: no-repeat;
+      background-size: 350px 457px;
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/review@2x.jpg");
+      }
     }
   }
 
@@ -154,19 +148,13 @@
     border: none;
   }
 
-  .feedback__button--prev::after {
-    top: 11px;
-    right: 17px;
-  }
-
-  .feedback__button--next::after {
-    top: 11px;
-    left: 18px;
+  .feedback__button-prev {
+    right: calc(50% - 25px);
   }
 
   .feedback__write {
     position: absolute;
-    top: 79px;
+    top: 80px;
     right: 50px;
     width: 175px;
     @include font-setting(17px, 20px, bold, $gray-dark);
@@ -174,11 +162,11 @@
 }
 @media (min-width: $desktop-width) {
   .feedback {
-    margin-bottom: 25px;
+    margin-bottom: 63px;
   }
 
   .feedback__wrapper {
-    padding-bottom: 186px;
+    padding-bottom: 100px;
 
     &::after {
       top: 1px;
@@ -203,5 +191,9 @@
   .feedback__author-name {
     margin-bottom: 4px;
     @include font-setting(17px, 24px, bold);
+  }
+
+  .feedback__button-next {
+    left: calc(50% - 25px);
   }
 }
