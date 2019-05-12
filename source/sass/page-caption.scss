@@ -2,13 +2,14 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-bottom: 27px;
+  margin-bottom: 32px;
   min-height: 177px;
   background-color: $page-caption-color;
+  z-index: 0;
 
   &--index {
-    min-height: 489px;
-    background-color: $page-caption-color;
+    min-height: 484px;
+    background-color: $page-caption-color-index;
     background-image: url("../img/hero-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-position: 50% -17px;
@@ -34,16 +35,15 @@
   align-items: center;
   margin: auto auto 0;
   width: 100%;
-  overflow: hidden;
 }
 
 .page-caption__button {
   display: flex;
   flex-flow: row;
   justify-content: center;
-  padding: 0 30px;
+  padding: 25px 30px 0;
   width: 100%;
-  min-height: 108px;
+  min-height: 103px;
   @include font-setting(19px, 24px, bold, $white);
   background-color: $tiffany;
   transform: translateY(5px);
@@ -78,35 +78,28 @@
   &--dark:hover {
     background-color: $tiffany-darker;
   }
-
-  &--icon-interior {
-    min-height: 103px;
-  }
 }
 
 .page-caption__button-text {
-  margin-top: 25px;
   margin-right: 80px;
   width: 50%;
 }
 
 .page-caption__button-icon {
   flex-shrink: 0;
-  margin-top: 23px;
+  margin-top: -2px;
   width: 60px;
   margin-right: -3px;
   opacity: 0.5;
 }
 @media (min-width: $tablet-width) {
   .page-caption {
-    margin-bottom: 57px;
+    margin-bottom: 7px;
     min-height: 215px;
 
     &--index {
-      min-height: 735px;
-      background-color: $page-caption-color;
+      min-height: 785px;
       background-image: url("../img/hero-tablet@1x.jpg");
-      background-repeat: no-repeat;
       background-position: 50% 0;
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/hero-tablet@2x.jpg");
@@ -120,7 +113,7 @@
   }
 
   .page-caption__wrapper {
-    padding-top: 58px;
+    padding-top: 56px;
   }
 
   .page-caption__title {
@@ -156,18 +149,22 @@
       margin-right: -8px;
     }
   }
+
+  .page-caption__clearfix {
+    height: 50px;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+  }
 }
 @media (min-width: $desktop-width) {
   .page-caption {
-    margin-bottom: 58px;
+    margin-bottom: 8px;
     min-height: 237px;
 
     &--index {
-      min-height: 744px;
-      background-color: $page-caption-color;
+      min-height: 794px;
       background-image: url("../img/hero-desktop@1x.jpg");
-      background-repeat: no-repeat;
-      background-position: 50% 0;
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/hero-desktop@2x.jpg");
       }

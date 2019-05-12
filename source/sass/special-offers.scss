@@ -19,10 +19,6 @@
   text-transform: uppercase;
 }
 
-.special-offers__subtitle br {
-  display: none;
-}
-
 .special-offers__text {
   margin: 0 0 16px;
   @include font-setting(15px, 24px, normal, $gray-dark);
@@ -91,13 +87,9 @@
 
   .special-offers__subtitle {
     margin: 5px 22px 0 0;
-    min-width: 80px;
+    width: 80px;
     text-align: center;
     @include font-setting(17px, 17px, bold, $tiffany);
-  }
-
-  .special-offers__subtitle br {
-    display: block;
   }
 
   .special-offers__text-wrapper {

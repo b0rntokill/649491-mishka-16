@@ -83,14 +83,16 @@
     width: 110px;
     fill: $black;
 
-    &:focus,
-    &:hover {
-      outline: none;
-      fill: $tiffany-darker;
-    }
+    &[href] {
+      &:focus,
+      &:hover {
+        outline: none;
+        fill: $tiffany-darker;
+      }
 
-    &:active {
-      opacity: 0.3;
+      &:active {
+        opacity: 0.3;
+      }
     }
   }
 
