@@ -1,0 +1,144 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  background-color: $white;
+  transform: translateX(-50%) translateY(-50%);
+
+  &--show {
+    display: block;
+  }
+}
+
+.modal__wrapper {
+  padding-top: 30px;
+  min-height: 336px;
+  border-top: 1px solid $graphite;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.modal__caption {
+  margin: 0 0 12px;
+  @include font-setting(25px, 30px, bold);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.modal__text {
+  margin: 0 0 22px;
+  @include font-setting(15px, 30px, normal, $gray-dark);
+  text-align: center;
+}
+
+.modal__size-list {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 0 32px;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+}
+
+.modal__size-item {
+  width: 31.53%;
+}
+
+.modal__size-item:not(:nth-child(3n)) {
+  margin-right: 7px;
+}
+
+.modal__radio {
+  &:checked ~ .modal__radio-label::after {
+    display: block;
+  }
+
+  &:focus ~ .modal__radio-label,
+  &:hover ~ .modal__radio-label {
+    outline: none;
+    border-color: $graphite;
+  }
+
+  &:active ~ .modal__radio-label {
+    border-color: $tiffany;
+  }
+}
+
+.modal__radio-label {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: none;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: 52px;
+    border: 2px solid $tiffany;
+  }
+  min-height: 52px;
+  @include font-setting(16px, 17px, bold, $gray-dark);
+  border: 2px solid $gray-light;
+}
+
+.modal__button {
+  width: 100%;
+  color: $white;
+  border-color: $tiffany;
+  background-color: $tiffany;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    border-color: $button-border;
+  }
+}
+@media (min-width: $tablet-width) {
+  .modal {
+    width: 73.82%;
+  }
+
+  .modal__wrapper {
+    padding-top: 32px;
+  }
+
+  .modal__caption {
+    margin: 0 0 14px;
+    @include font-setting(30px, 57px, bold);
+  }
+
+  .modal__text {
+    @include font-setting(17px, 30px, normal, $gray-dark);
+  }
+
+  .modal__size-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal__size-list {
+    margin: 0 0 32px;
+    width: 75%;
+  }
+
+  .modal__size-item {
+    width: 32%;
+  }
+
+  .modal__button {
+    width: 75%;
+  }
+}
+@media (min-width: $desktop-width) {
+  .modal {
+    width: 566px;
+  }
+}

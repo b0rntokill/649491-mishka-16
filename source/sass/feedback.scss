@@ -35,8 +35,8 @@
 }
 
 .feedback__button {
-  position: relative;
   display: inline-flex;
+  align-items: center;
   margin-bottom: 37px;
   padding: 0;
   width: 50%;
@@ -62,15 +62,11 @@
 }
 
 .feedback__button-prev {
-  position: absolute;
-  top: 11px;
-  right: calc(50% - 23px);
+  margin-left: calc(50% - 27px);
 }
 
 .feedback__button-next {
-  position: absolute;
-  top: 11px;
-  left: calc(50% - 26px);
+  margin-left: calc(50% - 26px);
   transform: rotate(180deg);
 }
 
@@ -137,7 +133,7 @@
   }
 
   .feedback__button-wrapper {
-    margin-top: -53px;
+    margin-top: -56px;
     min-width: 175px;
   }
 
@@ -149,7 +145,7 @@
   }
 
   .feedback__button-prev {
-    right: calc(50% - 25px);
+    margin-left: calc(50% - 25px);
   }
 
   .feedback__write {
@@ -193,7 +189,11 @@
     @include font-setting(17px, 24px, bold);
   }
 
+  .feedback__button-prev {
+    margin-left: calc(50% - 23px);
+  }
+
   .feedback__button-next {
-    left: calc(50% - 25px);
+    margin-left: calc(50% - 24px);
   }
 }
