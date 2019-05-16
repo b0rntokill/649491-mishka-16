@@ -1,8 +1,12 @@
 .special-offers {
+  position: relative;
   margin-bottom: 35px;
+  z-index: 20;
+  background-color: $white;
 }
 
 .special-offers__wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -63,7 +67,22 @@
 }
 @media (min-width: $tablet-width) {
   .special-offers {
+    margin-top: 0;
     margin-bottom: 50px;
+    padding-top: 45px;
+    background-color: $white;
+
+    &:after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: contain;
+      top: -12px;
+      left: 0;
+      width: 100%;
+      height: 22px;
+      display: block;
+    }
   }
 
   .special-offers__wrapper {
@@ -145,11 +164,28 @@
 @media (min-width: $desktop-width) {
   .special-offers {
     margin-bottom: 73px;
+    padding-top: 50px;
+
+    &:after {
+      display: none;
+    }
   }
 
   .special-offers__title-wrapper {
     justify-content: flex-start;
     padding-top: 66px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: contain;
+      top: -73px;
+      left: 0;
+      width: 100%;
+      height: 35px;
+      display: block;
+    }
   }
 
   .special-offers__title {

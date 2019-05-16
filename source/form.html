@@ -74,9 +74,9 @@
       <div class="form__wrapper">
         <h2 class="visually-hidden">Форма оформления заказа</h2>
         <p class="form__text-advice">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-        <form class="form__order clearfix" action="https://echo.htmlacademy.ru" method="get">
-          <fieldset class="form__fieldset form__fieldset--type">
-            <legend class="form__caption">Тип</legend>
+        <form class="form__order" action="https://echo.htmlacademy.ru" method="get">
+          <div class="form__fieldset form__fieldset--type">
+            <h3 class="form__caption">Тип</h3>
             <ul class="form__type-list">
               <li class="form__type-item">
                 <input class="form__radio visually-hidden" type="radio" name="order-type" value="accessory" id="accessory" checked>
@@ -87,10 +87,10 @@
                 <label class="form__radio-label" for="toy">Детская игрушка</label>
               </li>
             </ul>
-          </fieldset>
+          </div>
           <div class="form__color-wrapper">
-            <fieldset class="form__fieldset form__fieldset--color">
-              <legend class="form__caption form__caption--color">Цвет</legend>
+            <div class="form__fieldset form__fieldset--color">
+              <h3 class="form__caption form__caption--color">Цвет</h3>
               <ul class="form__color-list">
                 <li class="form__color-item">
                   <input class="form__checkbox visually-hidden" type="checkbox" name="white" id="color-white" checked>
@@ -117,26 +117,28 @@
                   <label class="form__checkbox-label" for="color-orange">Оранжевый</label>
                 </li>
               </ul>
-            </fieldset>
+            </div>
           </div>
-          <fieldset class="form__fieldset form__fieldset--name">
-            <legend class="form__caption form__caption--name">Фио</legend>
+          <div class="form__fieldset form__fieldset--name">
+            <h3 class="form__caption form__caption--name">Фио</h3>
             <div class="form__input-wrapper">
-              <label class="form__text-label" for="name-field">Имя:</label>
-              <input class="form__text-input" type="text" name="name" id="name-field" placeholder="Введите ваше имя*">
+              <div class="form__input-inner">
+                <label class="form__text-label" for="name-field">Имя:</label>
+                <input class="form__text-input" type="text" name="name" id="name-field" placeholder="Введите ваше имя*">
+              </div>
+              <div class="form__input-inner">
+                <label class="form__text-label" for="surname-field">Фамилия:</label>
+                <input class="form__text-input" type="text" name="surname" id="surname-field" placeholder="Укажите фамилию*">
+              </div>
+              <div class="form__input-inner">
+                <label class="form__text-label" for="patronymic-field">Отчество:</label>
+                <input class="form__text-input" type="text" name="patronymic" id="patronymic-field" placeholder="Отчество, если желаете">
+              </div>
             </div>
-            <div class="form__input-wrapper">
-              <label class="form__text-label" for="surname-field">Фамилия:</label>
-              <input class="form__text-input" type="text" name="surname" id="surname-field" placeholder="Укажите фамилию*">
-            </div>
-            <div class="form__input-wrapper">
-              <label class="form__text-label" for="patronymic-field">Отчество:</label>
-              <input class="form__text-input" type="text" name="patronymic" id="patronymic-field" placeholder="Отчество, если желаете">
-            </div>
-          </fieldset>
+          </div>
           <div class="form__communication-wrapper">
-            <fieldset class="form__fieldset form__fieldset--phone">
-              <legend class="form__caption form__caption--phone">Тел</legend>
+            <div class="form__fieldset form__fieldset--phone">
+              <h3 class="form__caption form__caption--phone">Тел</h3>
               <input class="form__tel-input" type="tel" name="phone" id="phone-field" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
               <label class="form__img-label" for="phone-field">
                 <svg width="25" height="25">
@@ -144,9 +146,9 @@
                 </svg>
                 <span class="visually-hidden">Номер телефона</span>
               </label>
-            </fieldset>
-            <fieldset class="form__fieldset form__fieldset--mail">
-              <legend class="form__caption form__caption--mail">e-mail</legend>
+            </div>
+            <div class="form__fieldset form__fieldset--mail">
+              <h3 class="form__caption form__caption--mail">e-mail</h3>
               <input class="form__email-input" type="email" name="email" id="email-field" placeholder="Ваш Email*">
               <label class="form__img-label form__img-label--mail" for="email-field">
                 <svg width="32" height="32">
@@ -154,12 +156,12 @@
                 </svg>
                 <span class="visually-hidden">Ваш e-mail</span>
               </label>
-            </fieldset>
+            </div>
           </div>
-          <fieldset class="form__fieldset form__fieldset--extra">
-            <legend class="form__caption form__caption--extra">Доп</legend>
+          <div class="form__fieldset form__fieldset--extra">
+            <h3 class="form__caption form__caption--extra">Доп</h3>
             <textarea class="form__textarea" name="textarea" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-          </fieldset>
+          </div>
           <div class="form__button-wrapper container">
             <p class="form__text-required">*Поля обязательны для заполнения</p>
             <button class="form__button button" type="submit">Отправить заказ</button>
@@ -209,6 +211,7 @@
       </a>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

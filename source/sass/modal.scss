@@ -29,7 +29,7 @@
 
 .modal__text {
   margin: 0 0 22px;
-  @include font-setting(15px, 30px, regular, $gray-dark);
+  @include font-setting(15px, 30px, normal, $gray-dark);
   text-align: center;
 }
 
@@ -115,7 +115,7 @@
   }
 
   .modal__text {
-    @include font-setting(17px, 30px, regular, $gray-dark);
+    @include font-setting(17px, 30px, normal, $gray-dark);
   }
 
   .modal__size-form {

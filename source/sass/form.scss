@@ -1,14 +1,23 @@
 .form__text-advice {
   margin: -10px 0 24px;
-  @include font-setting(13px, 24px, regular, $gray-dark);
+  padding: 0 30px;
+  @include font-setting(13px, 24px, normal, $gray-dark);
 }
 
 .form__fieldset {
   position: relative;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
   padding: 0;
   @include breakpoint;
   border: none;
+}
+
+.form__caption {
+  position: relative;
+  margin: 0;
+  text-transform: uppercase;
+  @include font-setting(17px, 16px, bold, $tiffany);
 
   &::after {
     position: absolute;
@@ -21,18 +30,16 @@
   }
 }
 
-.form__caption {
-  text-transform: uppercase;
-  @include font-setting(17px, 16px, bold, $tiffany);
-}
-
 .form__type-list {
-  margin: 0 0 31px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 16px;
   padding: 25px 0 0;
   list-style: none;
 }
 
 .form__type-item {
+  display: flex;
   min-height: 40px;
   margin-bottom: 15px;
 
@@ -91,12 +98,15 @@
 }
 
 .form__color-list {
-  margin: 0 0 31px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 10px;
   padding: 25px 0 0;
   list-style: none;
 }
 
 .form__color-item {
+  display: flex;
   margin-bottom: 21px;
   min-height: 40px;
 }
@@ -168,7 +178,7 @@
   margin-bottom: 22px;
   width: 100%;
   min-height: 52px;
-  @include font-setting(17px, 18px, regular);
+  @include font-setting(17px, 18px, normal);
   vertical-align: middle;
   border: none;
   border-bottom: 2px solid $black;
@@ -176,7 +186,7 @@
 
   &::placeholder {
     opacity: 0.3;
-    @include font-setting(17px, 18px, regular, $gray-dark);
+    @include font-setting(17px, 18px, normal, $gray-dark);
   }
 
   &:focus,
@@ -203,9 +213,13 @@
 .form__img-label {
   position: absolute;
   top: 33px;
-  right: 8px;
+  right: 38px;
   opacity: 0.2;
   fill: $black;
+}
+
+.form__img-label--mail {
+  right: 34px;
 }
 
 .form__email-input,
@@ -214,7 +228,7 @@
   padding-right: 40px;
   width: 100%;
   min-height: 52px;
-  @include font-setting(19px, 18px, regular);
+  @include font-setting(19px, 18px, normal);
   vertical-align: middle;
   border: none;
   border-bottom: 2px solid $black;
@@ -222,7 +236,7 @@
 
   &::placeholder {
     opacity: 0.3;
-    @include font-setting(19px, 18px, regular, $gray-dark);
+    @include font-setting(19px, 18px, normal, $gray-dark);
   }
 
   &:focus,
@@ -246,13 +260,9 @@
   }
 }
 
-.form__img-label--mail {
-  right: 4px;
-}
-
 .form__email-input {
   &::placeholder {
-    @include font-setting(17px, 18px, regular, $gray-dark);
+    @include font-setting(17px, 18px, normal, $gray-dark);
   }
 }
 
@@ -269,13 +279,13 @@
   padding: 14px;
   width: 100%;
   min-height: 142px;
-  @include font-setting(17px, 18px, regular);
+  @include font-setting(17px, 18px, normal);
   border: 2px solid $black;
   resize: none;
 
   &::placeholder {
     opacity: 0.3;
-    @include font-setting(17px, 18px, regular, $gray-dark);
+    @include font-setting(17px, 18px, normal, $gray-dark);
   }
 
   &:focus,
@@ -291,7 +301,7 @@
 
 .form__text-required {
   margin: 0 0 31px;
-  @include font-setting(14px, 16px, regular, $gray-dark);
+  @include font-setting(14px, 16px, normal, $gray-dark);
 }
 
 .form__button {
@@ -302,30 +312,34 @@
 }
 @media (min-width: $tablet-width) {
   .form__text-advice {
-    margin: 83px 0 56px;
+    margin: 83px 0 40px;
     padding: 0 50px;
-    @include font-setting(17px, 30px, regular, $gray-dark);
+    @include font-setting(17px, 30px, normal, $gray-dark);
   }
 
   .form__fieldset {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form__caption {
+    margin-top: 18px;
+
     &::after {
       display: none;
     }
   }
 
-  .form__caption {
-    position: absolute;
-    top: 18px;
-    left: 51px;
-  }
-
   .form__fieldset--type {
-    margin-bottom: 19px;
+    padding-top: 16px;
+    margin-bottom: 25px;
   }
 
   .form__type-list {
-    margin: 0 0 31px 25%;
+    margin: 0;
     padding: 0;
+    width: 75%;
   }
 
   .form__type-item {
@@ -356,23 +370,24 @@
   }
 
   .form__color-wrapper {
+    min-height: 304px;
     background-color: $gray-lighter;
   }
 
   .form__fieldset--color {
-    margin-bottom: 50px;
     padding-top: 50px;
   }
 
   .form__caption--color {
-    top: 67px;
+    margin-top: 17px;
   }
 
   .form__color-list {
     display: flex;
     flex-flow: row wrap;
-    margin: 0 0 26px 25%;
+    margin: 0;
     padding: 0;
+    width: 75%;
   }
 
   .form__color-item {
@@ -404,19 +419,23 @@
   }
 
   .form__fieldset--name {
+    padding-top: 50px;
     margin-bottom: 26px;
-    padding-left: 28.25%;
   }
 
   .form__caption--name {
     margin-bottom: 0;
-    top: 17px;
   }
 
   .form__input-wrapper {
+    width: 75%;
+  }
+
+  .form__input-inner {
     display: flex;
     flex-flow: row;
     margin-bottom: 24px;
+    width: 100%;
   }
 
   .form__text-label {
@@ -428,15 +447,14 @@
   .form__text-input {
     margin-bottom: 0;
     padding-left: 17px;
-    @include font-setting(19px, 18px, regular);
+    @include font-setting(19px, 18px, normal);
 
     &::placeholder {
-      @include font-setting(19px, 18px, regular, $gray-dark);
+      @include font-setting(19px, 18px, normal, $gray-dark);
     }
   }
 
   .form__communication-wrapper {
-    margin-bottom: 50px;
     padding-top: 50px;
     min-height: 228px;
     background-color: $gray-lighter;
@@ -444,14 +462,18 @@
 
   .form__fieldset--mail,
   .form__fieldset--phone {
+    justify-content: space-between;
     margin-bottom: 24px;
-    padding-left: 28.25%;
   }
 
-  .form__caption--mail,
   .form__caption--phone {
+    margin-right: 0;
     margin-bottom: 0;
-    top: 17px;
+  }
+
+  .form__caption--mail {
+    margin-right: 0;
+    margin-bottom: 0;
   }
 
   .form__img-label {
@@ -463,6 +485,7 @@
   .form__tel-input {
     padding-left: 16px;
     padding-right: 60px;
+    width: 75%;
   }
 
   .form__img-label--mail {
@@ -470,36 +493,43 @@
   }
 
   .form__email-input {
-    @include font-setting(19px, 18px, regular);
+    @include font-setting(19px, 18px, normal);
 
     &::placeholder {
-      @include font-setting(19px, 18px, regular, $gray-dark);
+      @include font-setting(19px, 18px, normal, $gray-dark);
     }
   }
 
   .form__fieldset--extra {
     margin-bottom: 53px;
-    padding-left: 28.25%;
+    padding-top: 26px;
   }
 
   .form__caption--extra {
+    margin-right: 0;
     margin-bottom: 0;
-    top: 17px;
   }
 
   .form__textarea {
     padding: 14px;
-    @include font-setting(19px, 18px, regular);
+    width: 75%;
+    @include font-setting(19px, 18px, normal);
 
     &::placeholder {
-      @include font-setting(19px, 18px, regular, $gray-dark);
+      @include font-setting(19px, 18px, normal, $gray-dark);
     }
+  }
+
+  .form__button-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
   }
 
   .form__text-required {
     float: right;
     margin: 8px 0 31px;
-    @include font-setting(17px, 30px, regular, $gray-dark);
+    @include font-setting(17px, 30px, normal, $gray-dark);
   }
 
   .form__button {
@@ -515,24 +545,28 @@
     width: $desktop-width;
   }
 
-  .form__caption {
-    left: 114px;
-  }
+  .form__caption {}
 
   .form__fieldset--type {
-    margin-bottom: 18px;
+    padding-top: 0;
+    padding-left: 116px;
+    margin-bottom: 24px;
   }
 
   .form__type-list {
-    margin: 0 0 31px 16.66%;
+    width: 88.7%;
   }
 
-  .form__caption--color {
-    left: 111px;
+  .form__color-wrapper {
+    min-height: 229px;
+  }
+
+  .form__fieldset--color {
+    padding-left: 112px;
   }
 
   .form__color-list {
-    margin: 0 0 26px 16.66%;
+    width: 88.4%;
   }
 
   .form__color-item {
@@ -544,22 +578,37 @@
   }
 
   .form__fieldset--name {
-    padding: 0 225px;
+    justify-content: flex-start;
+    padding-top: 49px;
+    padding-left: 112px;
   }
 
   .form__caption--name {
-    left: 111px;
+    margin-right: 74px;
+  }
+
+  .form__input-wrapper {
+    width: 70.8%;
   }
 
   .form__fieldset--mail,
   .form__fieldset--phone {
-    padding: 0 225px;
+    justify-content: flex-start;
   }
 
-  .form__caption--mail,
   .form__caption--phone {
-    top: 19px;
-    left: 111px;
+    margin-left: 64px;
+    margin-right: 81px;
+  }
+
+  .form__caption--mail {
+    margin-left: 64px;
+    margin-right: 55px;
+  }
+
+  .form__email-input,
+  .form__tel-input {
+    width: 66.7%;
   }
 
   .form__img-label {
@@ -571,8 +620,17 @@
   }
 
   .form__fieldset--extra {
+    justify-content: flex-start;
     margin-bottom: 49px;
-    padding: 0 225px;
+  }
+
+  .form__caption--extra {
+    margin-left: 65px;
+    margin-right: 73px;
+  }
+
+  .form__textarea {
+    width: 66.6%;
   }
 
   .form__button-wrapper {
@@ -580,13 +638,11 @@
   }
 
   .form__text-required {
-    float: right;
     margin: 10px 0 31px;
-    @include font-setting(17px, 30px, regular, $gray-dark);
+    @include font-setting(17px, 30px, normal, $gray-dark);
   }
 
   .form__button {
-    float: left;
     margin-bottom: 50px;
     width: 230px;
   }
