@@ -236,7 +236,31 @@
       </a>
     </div>
   </footer>
-  <script src="js/script.js"></script>
+  <section class="modal">
+    <div class="modal__wrapper container">
+      <h2 class="modal__caption">Добавить в&nbsp;корзину</h2>
+      <p class="modal__text">Выберите размер:</p>
+      <form class="modal__size-form" action="https://echo.htmlacademy.ru" method="post">
+        <ul class="modal__size-list">
+          <li class="modal__size-item">
+            <input class="modal__radio visually-hidden" type="radio" name="size-type" value="S" id="size-s" checked>
+            <label class="modal__radio-label" for="size-s">S</label>
+          </li>
+          <li class="modal__size-item">
+            <input class="modal__radio visually-hidden" type="radio" name="size-type" value="M" id="size-m">
+            <label class="modal__radio-label" for="size-m">M</label>
+          </li>
+          <li class="modal__size-item">
+            <input class="modal__radio visually-hidden" type="radio" name="size-type" value="L" id="size-l">
+            <label class="modal__radio-label" for="size-l">L</label>
+          </li>
+        </ul>
+        <button class="modal__button button" type="submit">Добавить</button>
+      </form>
+    </div>
+  </section>
+  <div class="overlay"></div>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>

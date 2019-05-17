@@ -16,7 +16,9 @@ menuToggle.addEventListener("click", function (evt) {
 });
 
 var mapInteractive = document.querySelector(".contacts__map");
-mapInteractive.classList.remove("contacts__map--nojs");
+  if (mapInteractive.classList.contains("contacts__map--nojs")) {
+    mapInteractive.classList.remove("contacts__map--nojs");
+  };
 
 var modal = document.querySelector(".modal");
 var modalOpen = document.querySelector(".special-offers__button");
