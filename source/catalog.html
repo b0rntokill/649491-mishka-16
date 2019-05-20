@@ -14,6 +14,9 @@
 </head>
 
 <body>
+  <div style="display: none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
   <header class="page-header">
     <nav class="page-header__nav page-header__nav--closed page-header__nav--nojs container">
       <div class="page-header__logo-wrapper">
@@ -38,7 +41,7 @@
         <li class="page-header__user-item">
           <a class="page-header__user-link page-header__user-link--search" href="cart.html">
             <svg class="page-header__icon" width="18" height="18">
-              <use xlink:href="img/sprite.svg#icon-search"></use>
+              <use xlink:href="#icon-search"></use>
             </svg>
             <span class="page-header__link-text">Поиск по сайту</span>
           </a>
@@ -46,7 +49,7 @@
         <li class="page-header__user-item">
           <a class="page-header__user-link page-header__user-link--cart" href="cart.html">
             <svg class="page-header__icon page-header__icon--cart" width="20" height="19">
-              <use xlink:href="img/sprite.svg#icon-cart"></use>
+              <use xlink:href="#icon-cart"></use>
             </svg>
             Корзина: пока пуста
           </a>
@@ -94,9 +97,9 @@
                 <span class="product__description">Рост 30 см, вес 200 г</span>
                 <p class="product__price">
                   1 200 руб.
-                  <a class="product__cart" href="#">
+                  <a class="product__cart js-button" href="#">
                     <svg width="20" height="19">
-                      <use xlink:href="img/sprite.svg#icon-cart"></use>
+                      <use xlink:href="#icon-cart"></use>
                     </svg>
                   </a>
                 </p>
@@ -123,9 +126,9 @@
                 <span class="product__description">Диаметр 15 см, высота 10 см</span>
                 <p class="product__price">
                   690 руб.
-                  <a class="product__cart" href="#">
+                  <a class="product__cart js-button" href="#">
                     <svg width="20" height="19">
-                      <use xlink:href="img/sprite.svg#icon-cart"></use>
+                      <use xlink:href="#icon-cart"></use>
                     </svg>
                   </a>
                 </p>
@@ -152,9 +155,9 @@
                 <span class="product__description">Диаметр 30 см, высота 30 см</span>
                 <p class="product__price">
                   1 500 руб.
-                  <a class="product__cart" href="#">
+                  <a class="product__cart js-button" href="#">
                     <svg width="20" height="19">
-                      <use xlink:href="img/sprite.svg#icon-cart"></use>
+                      <use xlink:href="#icon-cart"></use>
                     </svg>
                   </a>
                 </p>
@@ -169,7 +172,7 @@
         <div class="making__grid-wrapper">
           <h2 class="making__title">
             <svg class="making__title-icon" width="32px" height="32px">
-              <use xlink:href="img/sprite.svg#icon-video"></use>
+              <use xlink:href="#icon-video"></use>
             </svg>
             Процесс производства
           </h2>
@@ -185,7 +188,7 @@
             </picture>
             <button class="making__video-play" type="button">
               <svg width="102" height="78">
-                <use xlink:href="img/sprite.svg#icon-play"></use>
+                <use xlink:href="#icon-play"></use>
               </svg>
             </button>
           </div>
@@ -199,14 +202,14 @@
     <div class="page-footer__wrapper container">
       <a class="page-footer__logo" href="index.html">
         <svg width="103" height="35">
-          <use xlink:href="img/sprite.svg#logo-footer"></use>
+          <use xlink:href="#logo-footer"></use>
         </svg>
       </a>
       <ul class="page-footer__social-list">
         <li class="page-footer__social-item">
           <a class="page-footer__social-link page-footer__social-link--instagram" href="https://www.instagram.com">
             <svg width="22" height="22">
-              <use xlink:href="img/sprite.svg#icon-instagram"></use>
+              <use xlink:href="#icon-instagram"></use>
             </svg>
             <span class="visually-hidden">Инстаграм</span>
           </a>
@@ -214,7 +217,7 @@
         <li class="page-footer__social-item">
           <a class="page-footer__social-link page-footer__social-link--facebook" href="https://www.facebook.com">
             <svg width="15" height="28">
-              <use xlink:href="img/sprite.svg#icon-fb"></use>
+              <use xlink:href="#icon-fb"></use>
             </svg>
             <span class="visually-hidden">Фейсбук</span>
           </a>
@@ -222,16 +225,16 @@
         <li class="page-footer__social-item">
           <a class="page-footer__social-link page-footer__social-link--twitter" href="https://twitter.com">
             <svg width="24" height="20">
-              <use xlink:href="img/sprite.svg#icon-twitter"></use>
+              <use xlink:href="#icon-twitter"></use>
             </svg>
             <span class="visually-hidden">Твиттер</span>
           </a>
         </li>
       </ul>
-      <a class="page-footer__copyright" href="#">
+      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
         Разработано
         <svg class="page-footer__copyright-icon" width="27" height="34">
-          <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+          <use xlink:href="#logo-htmlacademy"></use>
         </svg>
       </a>
     </div>
@@ -262,5 +265,4 @@
   <div class="overlay"></div>
   <script src="js/script.min.js"></script>
 </body>
-
 </html>

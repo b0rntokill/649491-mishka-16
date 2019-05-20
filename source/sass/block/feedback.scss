@@ -8,6 +8,7 @@
 
 .feedback__title {
   margin: 0 0 23px;
+
   @include font-setting(25px, 30px, bold);
 }
 
@@ -17,11 +18,13 @@
 
 .feedback__text {
   margin: 0 0 25px;
+
   @include font-setting(15px, 30px, normal, $gray-dark);
 }
 
 .feedback__author-name {
   font-style: normal;
+
   @include font-setting(17px, 30px, bold);
 }
 
@@ -72,8 +75,10 @@
 
 .feedback__write {
   width: 100%;
+
   @include font-setting(18px, 20px, bold, $gray-dark);
 }
+
 @media (min-width: $tablet-width) {
   .feedback {
     margin-bottom: 66px;
@@ -92,10 +97,12 @@
       left: 0;
       width: 350px;
       height: 457px;
-      content: '';
+      content: "";
+      background-color: #f3f3f3;
       background-image: url("../img/review@1x.jpg");
       background-repeat: no-repeat;
       background-size: 350px 457px;
+
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/review@2x.jpg");
       }
@@ -105,6 +112,8 @@
   .feedback__title {
     width: 100%;
     margin: 77px 0 50px;
+    padding-right: 30%;
+
     @include font-setting(43px, 50px, bold);
   }
 
@@ -118,17 +127,20 @@
   .feedback__text {
     width: 100%;
     margin: 0 0 55px;
+
     @include font-setting(17px, 30px, normal, $gray-dark);
   }
 
   .feedback__author-name {
     width: 100%;
     margin-bottom: 5px;
+
     @include font-setting(18px, 24px, bold);
   }
 
   .feedback__author-nickname {
     width: 100%;
+
     @include font-setting(17px, 30px, normal);
   }
 
@@ -153,9 +165,11 @@
     top: 80px;
     right: 50px;
     width: 175px;
+
     @include font-setting(17px, 20px, bold, $gray-dark);
   }
 }
+
 @media (min-width: $desktop-width) {
   .feedback {
     margin-bottom: 63px;
@@ -172,6 +186,8 @@
 
   .feedback__title {
     margin: 71px 0 50px 171px;
+    padding-right: 20%;
+
     @include font-setting(53px, 57px, bold);
   }
 
@@ -186,6 +202,7 @@
 
   .feedback__author-name {
     margin-bottom: 4px;
+
     @include font-setting(17px, 24px, bold);
   }
 

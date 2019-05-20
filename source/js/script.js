@@ -16,39 +16,44 @@ menuToggle.addEventListener("click", function (evt) {
 });
 
 var mapInteractive = document.querySelector(".contacts__map");
-  if (mapInteractive.classList.contains("contacts__map--nojs")) {
+  if (mapInteractive) {
+    mapInteractive.classList.contains("contacts__map--nojs")
     mapInteractive.classList.remove("contacts__map--nojs");
   };
 
 var modal = document.querySelector(".modal");
-var modalOpen = document.querySelector(".special-offers__button");
+var modalOpen = document.querySelectorAll(".js-button");
 var overlay = document.querySelector(".overlay");
 
-modalOpen.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  modal.classList.add("modal--show");
-  overlay.classList.add("overlay--show");
-});
-
-overlay.addEventListener("click", function (evt) {
+for (var i = 0; i < modalOpen.length; i++) {
+  modalOpen[i].addEventListener("click", function (evt) {
     evt.preventDefault();
-    modal.classList.remove("modal--show");
-    overlay.classList.remove("overlay--show");
-});
+    modal.classList.add("modal--show");
+    overlay.classList.add("overlay--show");
+  });
+};
 
-overlay.addEventListener("touchend", function (evt) {
-    evt.preventDefault();
-    modal.classList.remove("modal--show");
-    overlay.classList.remove("overlay--show");
-});
-
-window.addEventListener("keydown", function (evt) {
-
-  if (evt.keyCode === 27) {
-    if (modal.classList.contains("modal--show")) {
+if (overlay) {
+  overlay.addEventListener("click", function (evt) {
       evt.preventDefault();
       modal.classList.remove("modal--show");
       overlay.classList.remove("overlay--show");
+  });
+
+  overlay.addEventListener("touchend", function (evt) {
+      evt.preventDefault();
+      modal.classList.remove("modal--show");
+      overlay.classList.remove("overlay--show");
+  });
+
+  window.addEventListener("keydown", function (evt) {
+
+    if (evt.keyCode === 27) {
+      if (modal.classList.contains("modal--show")) {
+        evt.preventDefault();
+        modal.classList.remove("modal--show");
+        overlay.classList.remove("overlay--show");
+      }
     }
-  }
-});
+  });
+}

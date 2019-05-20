@@ -33,11 +33,11 @@ gulp.task("css", function () {
 });
 
 gulp.task("html", function () {
- return gulp.src("source/*.html")
- .pipe(posthtml([
-   include()
- ]))
- .pipe(gulp.dest("build"));
+  return gulp.src("source/*.html")
+  .pipe(posthtml([
+  include()
+  ]))
+  .pipe(gulp.dest("build"));
 });
 
 gulp.task("serve", function () {
@@ -48,10 +48,9 @@ gulp.task("serve", function () {
     cors: true,
     ui: false
   });
-  
   gulp.watch("source/sass/**/*.scss", gulp.series("css","refresh"));
-  gulp.watch("source/*.html"), gulp.series("html","refresh");
-  gulp.watch("source/js/*.js"), gulp.series("scripts","refresh");
+  gulp.watch("source/*.html", gulp.series("html","refresh"));
+  gulp.watch("source/js/*.js", gulp.series("scripts","refresh"));
 });
 
 gulp.task("images", function() {
@@ -87,8 +86,7 @@ gulp.task("copy", function() {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**/*.js",
-    "source/*.ico"
+    "source/js/**/*.js"
   ], {
     base: "source"
   })
@@ -101,7 +99,7 @@ gulp.task("refresh", function(done) {
 });
 
 gulp.task("scripts", function() {
-  return gulp.src("source/js/*.js")
+  return gulp.src("source/js/script.js")
     .pipe(uglify())
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"));
