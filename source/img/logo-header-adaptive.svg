@@ -3,17 +3,17 @@
     .page-header__logo-tablet {
       display: none;
     }
-    
+
     .page-header__logo-desktop {
       display: none;
     }
-    
+
     @media (min-width: 768px) {
       .page-header__logo-tablet {
         display: inline-block;
       }
     }
-    
+
     @media (min-width: 1150px) {
       .page-header__logo-desktop {
         display: inline-block;

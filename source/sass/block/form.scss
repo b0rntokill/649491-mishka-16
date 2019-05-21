@@ -1,6 +1,7 @@
 .form__text-advice {
   margin: -10px 0 24px;
   padding: 0 30px;
+
   @include font-setting(13px, 24px, normal, $gray-dark);
 }
 
@@ -9,22 +10,28 @@
   display: flex;
   flex-direction: column;
   padding: 0;
+
   @include breakpoint;
+
   border: none;
 }
 
 .form__caption {
-  position: relative;
   margin: 0;
   text-transform: uppercase;
+
   @include font-setting(17px, 16px, bold, $tiffany);
 
+  overflow: hidden;
+
   &::after {
-    position: absolute;
+    position: relative;
+    display: inline-block;
     content: "";
-    top: 8px;
-    right: 0;
-    width: calc(100% - 23.84%);
+    top: -5px;
+    right: -21px;
+    margin-right: -100%;
+    width: 100%;
     height: 1px;
     background-color: $tiffany;
   }
@@ -69,7 +76,9 @@
   position: relative;
   padding-top: 9px;
   padding-left: 62px;
+
   @include font-setting(17px, 18px, bold);
+
   cursor: pointer;
 
   &::before {
@@ -132,7 +141,9 @@
   position: relative;
   padding-top: 11px;
   padding-left: 62px;
+
   @include font-setting(17px, 18px, bold);
+
   cursor: pointer;
 
   &::before {
@@ -170,6 +181,7 @@
 
 .form__text-label {
   display: block;
+
   @include font-setting(17px, 18px, bold);
 }
 
@@ -178,7 +190,9 @@
   margin-bottom: 22px;
   width: 100%;
   min-height: 52px;
+
   @include font-setting(17px, 18px, normal);
+
   vertical-align: middle;
   border: none;
   border-bottom: 2px solid $black;
@@ -186,6 +200,7 @@
 
   &::placeholder {
     opacity: 0.3;
+
     @include font-setting(17px, 18px, normal, $gray-dark);
   }
 
@@ -228,7 +243,9 @@
   padding-right: 40px;
   width: 100%;
   min-height: 52px;
+
   @include font-setting(19px, 18px, normal);
+
   vertical-align: middle;
   border: none;
   border-bottom: 2px solid $black;
@@ -236,6 +253,7 @@
 
   &::placeholder {
     opacity: 0.3;
+
     @include font-setting(19px, 18px, normal, $gray-dark);
   }
 
@@ -279,12 +297,15 @@
   padding: 14px;
   width: 100%;
   min-height: 142px;
+
   @include font-setting(17px, 18px, normal);
+
   border: 2px solid $black;
   resize: none;
 
   &::placeholder {
     opacity: 0.3;
+
     @include font-setting(17px, 18px, normal, $gray-dark);
   }
 
@@ -301,6 +322,7 @@
 
 .form__text-required {
   margin: 0 0 31px;
+
   @include font-setting(14px, 16px, normal, $gray-dark);
 }
 
@@ -310,10 +332,29 @@
   width: 100%;
   background-color: transparent;
 }
+
 @media (min-width: $tablet-width) {
+  .form {
+    position: relative;
+    padding-top: 68px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: contain;
+      top: -14px;
+      left: 0;
+      width: 100%;
+      height: 35px;
+      display: block;
+    }
+  }
+
   .form__text-advice {
-    margin: 83px 0 40px;
+    margin: 0 0 40px;
     padding: 0 50px;
+
     @include font-setting(17px, 30px, normal, $gray-dark);
   }
 
@@ -325,6 +366,12 @@
 
   .form__caption {
     margin-top: 18px;
+    width: 12%;
+    overflow: auto;
+
+    & span {
+      width: 100%;
+    }
 
     &::after {
       display: none;
@@ -354,6 +401,7 @@
   .form__radio-label {
     padding-top: 15px;
     padding-left: 80px;
+
     @include font-setting(19px, 18px, bold);
 
     &::before {
@@ -403,6 +451,7 @@
   .form__checkbox-label {
     padding-top: 15px;
     padding-left: 80px;
+
     @include font-setting(19px, 18px, bold);
 
     &::before {
@@ -441,12 +490,14 @@
   .form__text-label {
     padding-top: 15px;
     padding-right: 26px;
+
     @include font-setting(19px, 18px, bold);
   }
 
   .form__text-input {
     margin-bottom: 0;
     padding-left: 17px;
+
     @include font-setting(19px, 18px, normal);
 
     &::placeholder {
@@ -513,6 +564,7 @@
   .form__textarea {
     padding: 14px;
     width: 75%;
+
     @include font-setting(19px, 18px, normal);
 
     &::placeholder {
@@ -529,23 +581,47 @@
   .form__text-required {
     float: right;
     margin: 8px 0 31px;
+
     @include font-setting(17px, 30px, normal, $gray-dark);
   }
 
   .form__button {
     float: left;
+    margin-right: 15px;
     margin-bottom: 50px;
     width: 230px;
+    flex-shrink: 0;
   }
 }
+
 @media (min-width: $desktop-width) {
+  .form {
+    position: relative;
+    padding-top: 123px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: contain;
+      top: -14px;
+      left: 50%;
+      width: $desktop-width;
+      height: 35px;
+      display: block;
+      transform: translateX(-50%);
+    }
+  }
+
   .form__text-advice {
-    margin: 138px auto 56px;
+    margin: 0 auto 56px;
     padding: 0 225px;
     width: $desktop-width;
   }
 
-  .form__caption {}
+  .form__caption {
+    max-width: 99px;
+  }
 
   .form__fieldset--type {
     padding-top: 0;
@@ -584,7 +660,7 @@
   }
 
   .form__caption--name {
-    margin-right: 74px;
+    margin-right: 17px;
   }
 
   .form__input-wrapper {
@@ -593,22 +669,20 @@
 
   .form__fieldset--mail,
   .form__fieldset--phone {
-    justify-content: flex-start;
+    flex-flow: row;
+    justify-content: space-between;
+    padding-right: 223px;
   }
 
+  .form__caption--mail,
   .form__caption--phone {
     margin-left: 64px;
-    margin-right: 81px;
-  }
-
-  .form__caption--mail {
-    margin-left: 64px;
-    margin-right: 55px;
+    margin-right: 32px;
   }
 
   .form__email-input,
   .form__tel-input {
-    width: 66.7%;
+    width: 100%;
   }
 
   .form__img-label {
@@ -620,17 +694,19 @@
   }
 
   .form__fieldset--extra {
+    flex-flow: row;
     justify-content: flex-start;
     margin-bottom: 49px;
+    padding-right: 223px;
   }
 
   .form__caption--extra {
     margin-left: 65px;
-    margin-right: 73px;
+    margin-right: 29px;
   }
 
   .form__textarea {
-    width: 66.6%;
+    width: 100%;
   }
 
   .form__button-wrapper {
@@ -639,6 +715,7 @@
 
   .form__text-required {
     margin: 10px 0 31px;
+
     @include font-setting(17px, 30px, normal, $gray-dark);
   }
 

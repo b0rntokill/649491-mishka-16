@@ -15,10 +15,24 @@
 .catalog__item:not(:last-child) {
   margin-bottom: 30px;
 }
+
 @media (min-width: $tablet-width) {
   .catalog {
+    position: relative;
     margin-bottom: 53px;
-    padding-top: 83px;
+    padding-top: 81px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: contain;
+      top: -12px;
+      left: 0;
+      width: 100%;
+      height: 35px;
+      display: block;
+    }
   }
 
   .catalog__wrapper {
@@ -29,10 +43,31 @@
     margin-bottom: 54px;
   }
 }
+
 @media (min-width: $desktop-width) {
   .catalog {
     margin-bottom: 56px;
-    padding-top: 108px;
+    padding-top: 101px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .catalog__wrapper {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: contain;
+      top: -115px;
+      left: 0;
+      width: 100%;
+      height: 35px;
+      display: block;
+    }
   }
 
   .catalog__list {

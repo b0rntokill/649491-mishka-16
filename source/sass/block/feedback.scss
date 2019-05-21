@@ -8,6 +8,7 @@
 
 .feedback__title {
   margin: 0 0 23px;
+
   @include font-setting(25px, 30px, bold);
 }
 
@@ -17,12 +18,14 @@
 
 .feedback__text {
   margin: 0 0 25px;
+
   @include font-setting(15px, 30px, normal, $gray-dark);
 }
 
 .feedback__author-name {
-  @include font-setting(17px, 30px, bold);
   font-style: normal;
+
+  @include font-setting(17px, 30px, bold);
 }
 
 .feedback__author-nickname {
@@ -37,13 +40,13 @@
 .feedback__button {
   display: inline-flex;
   align-items: center;
-  margin-bottom: 37px;
-  padding: 0;
   width: 50%;
   min-height: 52px;
+  margin-bottom: 37px;
+  padding: 0;
+  cursor: pointer;
   border: 1px solid $gray-light;
   background-color: transparent;
-  cursor: pointer;
   fill: $black;
 
   &:first-child {
@@ -52,8 +55,8 @@
 
   &:focus,
   &:hover {
-    outline: none;
     opacity: 0.6;
+    outline: none;
   }
 
   &:active {
@@ -72,8 +75,10 @@
 
 .feedback__write {
   width: 100%;
+
   @include font-setting(18px, 20px, bold, $gray-dark);
 }
+
 @media (min-width: $tablet-width) {
   .feedback {
     margin-bottom: 66px;
@@ -86,16 +91,18 @@
     padding-bottom: 50px;
 
     &::after {
-      content: "";
       position: absolute;
-      width: 350px;
-      height: 457px;
+      z-index: -1;
       top: 0;
       left: 0;
-      z-index: -1;
+      width: 350px;
+      height: 457px;
+      content: "";
+      background-color: #f3f3f3;
       background-image: url("../img/review@1x.jpg");
       background-repeat: no-repeat;
       background-size: 350px 457px;
+
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/review@2x.jpg");
       }
@@ -103,44 +110,49 @@
   }
 
   .feedback__title {
-    margin: 77px 0 50px;
     width: 100%;
+    margin: 77px 0 50px;
+    padding-right: 30%;
+
     @include font-setting(43px, 50px, bold);
   }
 
   .feedback__item {
     display: flex;
     flex-flow: row wrap;
-    margin: 0;
     width: 100%;
+    margin: 0;
   }
 
   .feedback__text {
-    margin: 0 0 55px;
     width: 100%;
+    margin: 0 0 55px;
+
     @include font-setting(17px, 30px, normal, $gray-dark);
   }
 
   .feedback__author-name {
-    margin-bottom: 5px;
     width: 100%;
+    margin-bottom: 5px;
+
     @include font-setting(18px, 24px, bold);
   }
 
   .feedback__author-nickname {
     width: 100%;
+
     @include font-setting(17px, 30px, normal);
   }
 
   .feedback__button-wrapper {
-    margin-top: -56px;
     min-width: 175px;
+    margin-top: -56px;
   }
 
   .feedback__button {
     order: 1;
-    margin-bottom: 0;
     min-height: 45px;
+    margin-bottom: 0;
     border: none;
   }
 
@@ -153,9 +165,11 @@
     top: 80px;
     right: 50px;
     width: 175px;
+
     @include font-setting(17px, 20px, bold, $gray-dark);
   }
 }
+
 @media (min-width: $desktop-width) {
   .feedback {
     margin-bottom: 63px;
@@ -172,6 +186,8 @@
 
   .feedback__title {
     margin: 71px 0 50px 171px;
+    padding-right: 20%;
+
     @include font-setting(53px, 57px, bold);
   }
 
@@ -180,12 +196,13 @@
   }
 
   .feedback__text {
-    margin: 0 0 38px;
     width: 89.1%;
+    margin: 0 0 38px;
   }
 
   .feedback__author-name {
     margin-bottom: 4px;
+
     @include font-setting(17px, 24px, bold);
   }
 

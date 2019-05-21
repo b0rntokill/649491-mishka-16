@@ -1,7 +1,7 @@
 .special-offers {
   position: relative;
   margin-bottom: 35px;
-  z-index: 20;
+  z-index: 1;
   background-color: $white;
 }
 
@@ -13,25 +13,31 @@
 
 .special-offers__title {
   margin: 0 0 5px;
+
   @include font-setting(25px, 30px, bold);
 }
 
 .special-offers__subtitle {
   display: block;
   margin-bottom: 23px;
+
   @include font-setting(17px, 20px, bold, $tiffany);
+
   text-transform: uppercase;
 }
 
 .special-offers__text {
   margin: 0 0 16px;
+
   @include font-setting(15px, 24px, normal, $gray-dark);
 }
 
 .special-offers__details-table {
   margin-bottom: 27px;
   width: 100%;
+
   @include font-setting(15px, 24px, normal, $gray-dark);
+
   border-collapse: collapse;
 }
 
@@ -59,28 +65,30 @@
   display: block;
   padding-left: 67px;
   margin-bottom: 25px;
+
   @include font-setting(17px, 24px, bold, $gray-dark);
 }
 
 .special-offers__button {
   min-width: 260px;
 }
+
 @media (min-width: $tablet-width) {
   .special-offers {
     margin-top: 0;
     margin-bottom: 50px;
-    padding-top: 45px;
+    padding-top: 46px;
     background-color: $white;
 
-    &:after {
+    &::after {
       content: "";
       position: absolute;
       background-image: url("../img/bg-zigzag-fill.svg");
       background-size: contain;
-      top: -12px;
+      top: -10px;
       left: 0;
       width: 100%;
-      height: 22px;
+      height: 35px;
       display: block;
     }
   }
@@ -91,7 +99,7 @@
 
   .special-offers__title-wrapper {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 49px;
@@ -101,6 +109,7 @@
 
   .special-offers__title {
     margin: 0 0 0 -3px;
+
     @include font-setting(43px, 50px, bold);
   }
 
@@ -108,12 +117,12 @@
     margin: 5px 22px 0 0;
     width: 80px;
     text-align: center;
+
     @include font-setting(17px, 17px, bold, $tiffany);
   }
 
   .special-offers__text-wrapper {
     float: left;
-    margin-bottom: 28px;
     padding: 0;
     width: 43.56%;
   }
@@ -121,11 +130,13 @@
   .special-offers__text {
     margin: 0 0 34px;
     width: 100%;
+
     @include font-setting(17px, 30px, normal, $gray-dark);
   }
 
   .special-offers__details-table {
     width: 100%;
+
     @include font-setting(15px, 20px, normal, $gray-dark);
   }
 
@@ -147,6 +158,7 @@
 
   .special-offers__price-wrapper {
     float: left;
+    margin-top: 27px;
     margin-left: -2px;
     padding: 0;
   }
@@ -154,6 +166,7 @@
   .special-offers__price {
     padding-left: 73px;
     margin-bottom: 35px;
+
     @include font-setting(20px, 24px, bold, $gray-dark);
   }
 
@@ -161,12 +174,13 @@
     min-width: 292px;
   }
 }
+
 @media (min-width: $desktop-width) {
   .special-offers {
     margin-bottom: 73px;
-    padding-top: 50px;
+    padding-top: 60px;
 
-    &:after {
+    &::after {
       display: none;
     }
   }
@@ -175,12 +189,12 @@
     justify-content: flex-start;
     padding-top: 66px;
 
-    &:after {
+    &::after {
       content: "";
       position: absolute;
       background-image: url("../img/bg-zigzag-fill.svg");
       background-size: contain;
-      top: -73px;
+      top: -75px;
       left: 0;
       width: 100%;
       height: 35px;
@@ -191,6 +205,7 @@
   .special-offers__title {
     order: 1;
     margin: 0;
+
     @include font-setting(53px, 57px, bold);
   }
 
@@ -200,7 +215,7 @@
 
   .special-offers__text-wrapper {
     margin-left: 175px;
-    margin-bottom: 81px;
+    margin-bottom: 61px;
     width: 28%;
   }
 
@@ -222,6 +237,6 @@
   }
 
   .special-offers__price-wrapper {
-    margin: 0 0 0 175px;
+    margin: 20px 0 0 175px;
   }
 }
