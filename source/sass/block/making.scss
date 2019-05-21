@@ -84,7 +84,7 @@
 .making__button {
   min-width: 192px;
 
-  @include font-setting(17px, 16px, bold, $gray-dark);
+  @include font-setting(17px, 17px, bold, $gray-dark);
 }
 
 @media (min-width: $tablet-width) {
@@ -143,8 +143,6 @@
 
   .making__button {
     min-width: 583px;
-
-    @include font-setting(17px, 16px, bold, $gray-dark);
   }
 }
 
@@ -154,11 +152,33 @@
   }
 
   .making__grid-wrapper {
+    position: relative;
     flex-wrap: wrap;
     align-items: flex-start;
     padding-bottom: 0;
     min-height: 455px;
     box-shadow: inset 0 0 0 1px $gray-light;
+
+    &::after {
+      content: "";
+      display: none;
+      position: absolute;
+      width: 369px;
+      height: 100%;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+      background-color: transparent;
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &:hover::after {
+      display: block;
+    }
+
+    &:active::after {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    }
   }
 
   .making__title {
@@ -189,6 +209,6 @@
 
   .making__button {
     margin-left: 762px;
-    min-width: 228px;
+    min-width: 230px;
   }
 }
